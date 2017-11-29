@@ -174,13 +174,7 @@ a
 b
 c
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">R := [PqLeftNormComm([b, a, a, b, c])^11, </span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">         PqLeftNormComm([a, b, b, a, b, c])^11, (a * b)^11];</span>
-[ b^-1*a^-2*b^-1*a*b*a*b^-1*a^-1*b*a*b*a^-1*b^-1*a*b*a^-1*b^-1*a^-1*b*a^2*c^
-    ... 22 lines deleted here ...
-    -1*a*b*a^-1*b^-1*a^-1*b*a^2*b*c, b^-1*a^-1*b^-2*a^-1*b*a*b*a^-1*b^
-    ... 43 lines deleted here ...
-    -1*b^-1*a^-1*b*a*b^-1*a^-1*b^-1*a*b^2*a*b*c, 
-  a*b*a*b*a*b*a*b*a*b*a*b*a*b*a*b*a*b*a*b*a*b ]
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">         PqLeftNormComm([a, b, b, a, b, c])^11, (a * b)^11];;</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">procId := PqStart(F/R : Prime := 11);</span>
 1
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PqPcPresentation(procId : ClassBound := 7, </span>
@@ -598,8 +592,8 @@ od;
 
 <h5>A.4-1 PqDescendantsTreeCoclassOne</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqDescendantsTreeCoclassOne</code>( <var class="Arg">i</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqDescendantsTreeCoclassOne</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqDescendantsTreeCoclassOne</code>( <var class="Arg">i</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqDescendantsTreeCoclassOne</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, generate a descendant tree for the group of the process (which must be a pc <span class="SimpleMath">\(p\)</span>-group) consisting of descendants of <span class="SimpleMath">\(p\)</span>-coclass 1 and extending to the class determined by the option <code class="code">TreeDepth</code> (or 6 if the option is omitted). In an <strong class="pkg">XGAP</strong> session, a graphical representation of the descendants tree appears in a separate window. Subsequent calls to <code class="code">PqDescendantsTreeCoclassOne</code> for the same process may be used to extend the descendant tree from the last descendant computed that itself has more than one descendant. <code class="code">PqDescendantsTreeCoclassOne</code> also accepts the options <code class="code">CapableDescendants</code> (or <code class="code">AllDescendants</code>) and any options accepted by the interactive <code class="code">PqDescendants</code> function (see <code class="func">PqDescendants</code> (<a href="chap5_mj.html#X795817217C53AB89"><span class="RefLink">5.3-6</span></a>)).</p>
 
 <p><em>Notes</em></p>

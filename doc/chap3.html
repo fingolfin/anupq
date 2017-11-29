@@ -130,7 +130,7 @@ ANUPQWarnOfOtherOptions := true;
 
 <h5>3.2-1 ANUPQData</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ANUPQData</code></td><td class="tdright">( global variable )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ANUPQData</code></td><td class="tdright">(&nbsp;global variable&nbsp;)</td></tr></table></div>
 <p>is a <strong class="pkg">GAP</strong> record in which the essential data for an <strong class="pkg">ANUPQ</strong> session within <strong class="pkg">GAP</strong> is stored; its fields are:</p>
 
 
@@ -269,7 +269,7 @@ ANUPQWarnOfOtherOptions := true;
 
 <h5>3.2-2 ANUPQDirectoryTemporary</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ANUPQDirectoryTemporary</code>( <var class="Arg">dir</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ANUPQDirectoryTemporary</code>( <var class="Arg">dir</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>calls the UNIX command <code class="code">mkdir</code> to create <var class="Arg">dir</var>, which must be a string, and if successful a directory object for <var class="Arg">dir</var> is both assigned to <code class="code">ANUPQData.tmpdir</code> and returned. The field <code class="code">ANUPQData.outfile</code> is also set to be a file in <code class="code">ANUPQData.tmpdir</code>, and on exit from <strong class="pkg">GAP</strong> <var class="Arg">dir</var> is removed. Most users will never need this command; by default, <strong class="pkg">GAP</strong> typically chooses a "random" subdirectory of <code class="code">/tmp</code> for <code class="code">ANUPQData.tmpdir</code> which may occasionally have limits on what may be written there. <code class="code">ANUPQDirectoryTemporary</code> permits the user to choose a directory (object) where one is not so limited.</p>
 
 <p><a id="X83E5C7CF7D8739DF" name="X83E5C7CF7D8739DF"></a></p>
@@ -280,7 +280,7 @@ ANUPQWarnOfOtherOptions := true;
 
 <h5>3.3-1 InfoANUPQ</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; InfoANUPQ</code></td><td class="tdright">( info class )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; InfoANUPQ</code></td><td class="tdright">(&nbsp;info class&nbsp;)</td></tr></table></div>
 <p>The input to and the output from the <code class="code">pq</code> program is, by default, not displayed. However the user may choose to see some, or all, of this input/output. This is done via the <code class="code">Info</code> mechanism (see Section <a href="https://www.gap-system.org/Manuals/doc/ref/chap7_mj.html#X7A9C902479CB6F7C"><span class="RefLink">Reference: Info Functions</span></a> in the <strong class="pkg">GAP</strong> Reference Manual). For this purpose, there is the <var class="Arg">InfoClass</var> <code class="code">InfoANUPQ</code>. If the <code class="code">InfoLevel</code> of <code class="code">InfoANUPQ</code> is high enough each line of <code class="code">pq</code> input/output is directed to a call to <code class="code">Info</code> and will be displayed for the user to see. By default, the <code class="code">InfoLevel</code> of <code class="code">InfoANUPQ</code> is 1, and it is recommended that you leave it at this level, or higher. Messages that the user should presumably want to see and output from the <code class="code">pq</code> program influenced by the value of the option <code class="code">OutputLevel</code> (see the options listed in Section <code class="func">Pq</code> (<a href="chap4.html#X86DD32D5803CF2C8"><span class="RefLink">4.1-1</span></a>)), other than timing and memory usage are directed to <code class="code">Info</code> at <code class="code">InfoANUPQ</code> level 1.</p>
 
 <p>To turn off <em>all</em> <code class="code">InfoANUPQ</code> messaging, set the <code class="code">InfoANUPQ</code> level to 0.</p>
@@ -330,7 +330,7 @@ ANUPQWarnOfOtherOptions := true;
 
 <h5>3.4-1 PqLeftNormComm</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqLeftNormComm</code>( <var class="Arg">elts</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqLeftNormComm</code>( <var class="Arg">elts</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>returns for a list of elements of some group (e.g. <var class="Arg">elts</var> may be a list of words in the generators of a free or fp group) the left normed commutator of <var class="Arg">elts</var>, e.g. if <var class="Arg">w1</var>, <var class="Arg">w2</var>, <var class="Arg">w3</var> are such elements then <code class="code">PqLeftNormComm( [<var class="Arg">w1</var>, <var class="Arg">w2</var>, <var class="Arg">w3</var>] );</code> is equivalent to <code class="code">Comm( Comm( <var class="Arg">w1</var>, <var class="Arg">w2</var> ), <var class="Arg">w3</var> );</code>.</p>
 
 <p><em>Note:</em> <var class="Arg">elts</var> must contain at least two elements.</p>
@@ -339,7 +339,7 @@ ANUPQWarnOfOtherOptions := true;
 
 <h5>3.4-2 PqGAPRelators</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqGAPRelators</code>( <var class="Arg">group</var>, <var class="Arg">rels</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqGAPRelators</code>( <var class="Arg">group</var>, <var class="Arg">rels</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>returns a list of words that <strong class="pkg">GAP</strong> understands, given a list <var class="Arg">rels</var> of strings in the string representations of the generators of the fp group <var class="Arg">group</var> prepared as a list of relators for the <code class="code">pq</code> program.</p>
 
 <p><em>Note:</em> The <code class="code">pq</code> program does not use <code class="code">/</code> to indicate multiplication by an inverse and uses square brackets to represent (left normed) commutators. Also, even though the <code class="code">pq</code> program accepts relations, all elements of <var class="Arg">rels</var> <em>must</em> be in relator form, i.e. a relation of form <code class="code"><var class="Arg">w1</var> = <var class="Arg">w2</var></code> must be written as <code class="code"><var class="Arg">w1</var>*(<var class="Arg">w2</var>)^-1</code>.</p>
@@ -361,7 +361,7 @@ ANUPQWarnOfOtherOptions := true;
 
 <h5>3.4-3 PqParseWord</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqParseWord</code>( <var class="Arg">word</var>, <var class="Arg">n</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqParseWord</code>( <var class="Arg">word</var>, <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>parses a <var class="Arg">word</var>, a string representing a word in the pc generators <code class="code">x1,...,x<var class="Arg">n</var></code>, through <strong class="pkg">GAP</strong>. This function is provided as a rough-and-ready check of <var class="Arg">word</var> for syntax errors. A syntax error will cause the entering of a <code class="code">break</code>-loop, in which the error message may or may not be meaningful (depending on whether the syntax error gets caught at the <strong class="pkg">GAP</strong> or kernel level).</p>
 
 <p><em>Note:</em> The reason the generators <em>must</em> be <code class="code">x1,...,x<var class="Arg">n</var></code> is that these are the pc generator names used by the <code class="code">pq</code> program (as distinct from the generator names for the group provided by the user to a function like <code class="code">Pq</code> that invokes the <code class="code">pq</code> program).</p>
@@ -370,9 +370,9 @@ ANUPQWarnOfOtherOptions := true;
 
 <h5>3.4-4 PqExample</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqExample</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqExample</code>( <var class="Arg">example</var>[, <var class="Arg">PqStart</var>][, <var class="Arg">Display</var>] )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqExample</code>( <var class="Arg">example</var>[, <var class="Arg">PqStart</var>][, <var class="Arg">filename</var>] )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqExample</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqExample</code>( <var class="Arg">example</var>[, <var class="Arg">PqStart</var>][, <var class="Arg">Display</var>] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqExample</code>( <var class="Arg">example</var>[, <var class="Arg">PqStart</var>][, <var class="Arg">filename</var>] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>With no arguments, or with single argument <code class="code">"index"</code>, or a string <var class="Arg">example</var> that is not the name of a file in the <code class="code">examples</code> directory, an index of available examples is displayed.</p>
 
 <p>With just the one argument <var class="Arg">example</var> that is the name of a file in the <code class="code">examples</code> directory, the example contained in that file is executed in its simplest form. Some examples accept options which you may use to modify some of the options used in the commands of the example. To find out which options an example accepts, use one of the mechanisms for displaying the example described below.</p>
@@ -387,21 +387,21 @@ ANUPQWarnOfOtherOptions := true;
 
 <h5>3.4-5 AllPqExamples</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AllPqExamples</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AllPqExamples</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>returns a list of all currently available examples in default UNIX-listing (i.e. alphabetic) order.</p>
 
 <p><a id="X7E3E4B047DC2E323" name="X7E3E4B047DC2E323"></a></p>
 
 <h5>3.4-6 GrepPqExamples</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GrepPqExamples</code>( <var class="Arg">string</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GrepPqExamples</code>( <var class="Arg">string</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>runs the UNIX command <code class="code">grep <var class="Arg">string</var></code> over the <strong class="pkg">ANUPQ</strong> examples and returns the list of examples for which there is a match. The actual matches are <code class="code">Info</code>-ed at <code class="code">InfoANUPQ</code> level 2.</p>
 
 <p><a id="X8104B2BA872EFCCB" name="X8104B2BA872EFCCB"></a></p>
 
 <h5>3.4-7 ToPQLog</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ToPQLog</code>( [<var class="Arg">filename</var>] )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ToPQLog</code>( [<var class="Arg">filename</var>] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>With string argument <var class="Arg">filename</var>, <code class="code">ToPQLog</code> opens the file with name <var class="Arg">filename</var> for logging; all commands written to the <code class="code">pq</code> binary (that are <code class="code">Info</code>-ed behind a "<code class="code">ToPQ&gt; </code>" prompt at <code class="code">InfoANUPQ</code> level 4) are then also written to that file (but without prompts). With no argument, <code class="code">ToPQLog</code> stops logging to whatever file was being logged to. If a file was already being logged to, that file is closed and the file with name <var class="Arg">filename</var> is opened for logging.</p>
 
 <p><a id="X818175EF85CAA807" name="X818175EF85CAA807"></a></p>
@@ -412,9 +412,9 @@ ANUPQWarnOfOtherOptions := true;
 
 <h5>3.5-1 NuclearRank</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; NuclearRank</code>( <var class="Arg">G</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; MultiplicatorRank</code>( <var class="Arg">G</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsCapable</code>( <var class="Arg">G</var> )</td><td class="tdright">( property )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; NuclearRank</code>( <var class="Arg">G</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; MultiplicatorRank</code>( <var class="Arg">G</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsCapable</code>( <var class="Arg">G</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
 <p>return the nuclear rank of <var class="Arg">G</var>, <span class="SimpleMath">p</span>-multiplicator rank of <var class="Arg">G</var>, and whether <var class="Arg">G</var> is capable (i.e. <code class="keyw">true</code> if it is, or <code class="keyw">false</code> if it is not), respectively.</p>
 
 <p>These attributes and property are set automatically if <var class="Arg">G</var> is one of the following:</p>
@@ -435,7 +435,7 @@ ANUPQWarnOfOtherOptions := true;
 
 
 <div class="example"><pre>
-SetFeatureObj( G, IsPGroup, true );
+SetIsPGroup( G, true );
 </pre></div>
 
 <p>or by invoking <code class="code">IsPGroup( <var class="Arg">G</var> )</code>. Note that for an fp group <var class="Arg">G</var>, the latter may result in a coset enumeration which might not terminate in a reasonable time.</p>
@@ -481,7 +481,7 @@ SetFeatureObj( G, IsPGroup, true );
 
 <h5>3.6-1 ANUPQWarnOfOtherOptions</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ANUPQWarnOfOtherOptions</code></td><td class="tdright">( global variable )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ANUPQWarnOfOtherOptions</code></td><td class="tdright">(&nbsp;global variable&nbsp;)</td></tr></table></div>
 <p>is a global variable that is by default <code class="keyw">false</code>. If it is set to <code class="keyw">true</code> then any function provided by the <strong class="pkg">ANUPQ</strong> function that recognises at least one option, will warn you of "other" options, i.e. options that the function does not recognise. These warnings are emitted at <code class="code">InfoWarning</code> or <code class="code">InfoANUPQ</code> level 1. This is useful for detecting mis-spelled options. Here is an example using the function <code class="code">Pq</code> (first described in Chapter <a href="chap4.html#X7C51F26D839279FF"><span class="RefLink"><span class="Heading">Non-interactive ANUPQ functions</span></span></a>):</p>
 
 

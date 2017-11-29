@@ -1,6 +1,6 @@
 name: ANUPQ
-version: 3.1.5
-date: 20/07/2017
+version: 3.2
+date: 29/11/2017
 description: |
     ANU p-Quotient
 
@@ -18,7 +18,7 @@ maintainers:
     - name: Max Horn
       url: http://www.quendi.de/math
 
-GAP: ">= 4.5"
+GAP: ">= 4.8"
 
 needed-pkgs:
     - name: "autpgrp"
@@ -31,9 +31,9 @@ packageinfo: https://gap-packages.github.io/anupq/PackageInfo.g
 
 downloads:
     - name: .tar.gz
-      url: https://github.com/gap-packages/anupq/releases/download/v3.1.5/anupq-3.1.5.tar.gz
+      url: https://github.com/gap-packages/anupq/releases/download/v3.2/anupq-3.2.tar.gz
     - name: .tar.bz2
-      url: https://github.com/gap-packages/anupq/releases/download/v3.1.5/anupq-3.1.5.tar.bz2
+      url: https://github.com/gap-packages/anupq/releases/download/v3.2/anupq-3.2.tar.bz2
 
 abstract: |
     The <span class="pkgname">ANUPQ</span> package provides an interactive    interface to the p-quotient, p-group generation and standard presentation    algorithms of the ANU pq C program.

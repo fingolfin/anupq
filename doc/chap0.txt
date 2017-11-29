@@ -6,10 +6,10 @@
                                 [1X ANU p-Quotient [101X
   
   
-                                     3.1.5
+                                      3.2
   
   
-                                  20 July 2017
+                                29 November 2017
   
   
                                   Greg Gamble

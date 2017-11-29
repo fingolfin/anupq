@@ -162,13 +162,7 @@
     [4X[28Xb[128X[104X
     [4X[28Xc[128X[104X
     [4X[25Xgap>[125X [27XR := [PqLeftNormComm([b, a, a, b, c])^11, [127X[104X
-    [4X[25X>[125X [27X         PqLeftNormComm([a, b, b, a, b, c])^11, (a * b)^11];[127X[104X
-    [4X[28X[ b^-1*a^-2*b^-1*a*b*a*b^-1*a^-1*b*a*b*a^-1*b^-1*a*b*a^-1*b^-1*a^-1*b*a^2*c^[128X[104X
-    [4X[28X    ... 22 lines deleted here ...[128X[104X
-    [4X[28X    -1*a*b*a^-1*b^-1*a^-1*b*a^2*b*c, b^-1*a^-1*b^-2*a^-1*b*a*b*a^-1*b^[128X[104X
-    [4X[28X    ... 43 lines deleted here ...[128X[104X
-    [4X[28X    -1*b^-1*a^-1*b*a*b^-1*a^-1*b^-1*a*b^2*a*b*c, [128X[104X
-    [4X[28X  a*b*a*b*a*b*a*b*a*b*a*b*a*b*a*b*a*b*a*b*a*b ][128X[104X
+    [4X[25X>[125X [27X         PqLeftNormComm([a, b, b, a, b, c])^11, (a * b)^11];;[127X[104X
     [4X[25Xgap>[125X [27XprocId := PqStart(F/R : Prime := 11);[127X[104X
     [4X[28X1[128X[104X
     [4X[25Xgap>[125X [27XPqPcPresentation(procId : ClassBound := 7, [127X[104X
@@ -616,8 +610,8 @@
   
   [1XA.4-1 PqDescendantsTreeCoclassOne[101X
   
-  [29X[2XPqDescendantsTreeCoclassOne[102X( [3Xi[103X ) [32X function
-  [29X[2XPqDescendantsTreeCoclassOne[102X(  ) [32X function
+  [33X[1;0Y[29X[2XPqDescendantsTreeCoclassOne[102X( [3Xi[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XPqDescendantsTreeCoclassOne[102X(  ) [32X function[133X
   
   [33X[0;0Yfor the [3Xi[103Xth or default interactive [5XANUPQ[105X process, generate a descendant tree
   for  the  group  of  the  process (which must be a pc [22Xp[122X-group) consisting of

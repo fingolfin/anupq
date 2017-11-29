@@ -39,7 +39,7 @@
   
   [1X4.1-1 Pq[101X
   
-  [29X[2XPq[102X( [3XF:[103X [3Xoptions[103X ) [32X function
+  [33X[1;0Y[29X[2XPq[102X( [3XF:[103X [3Xoptions[103X ) [32X function[133X
   
   [33X[0;0Yreturns  for the fp or pc group [3XF[103X, the [22Xp[122X-quotient of [3XF[103X specified by [3Xoptions[103X,
   as  a  pc  group. Following the colon, [3Xoptions[103X is a selection of the options
@@ -199,7 +199,7 @@
   
   [1X4.1-2 PqEpimorphism[101X
   
-  [29X[2XPqEpimorphism[102X( [3XF:[103X [3Xoptions[103X ) [32X function
+  [33X[1;0Y[29X[2XPqEpimorphism[102X( [3XF:[103X [3Xoptions[103X ) [32X function[133X
   
   [33X[0;0Yreturns  for  the fp or pc group [3XF[103X an epimorphism from [3XF[103X onto the [22Xp[122X-quotient
   of  [3XF[103X specified by [3Xoptions[103X; the possible options [3Xoptions[103X and [13Xrequired[113X option
@@ -233,7 +233,7 @@
   
   [1X4.1-3 PqPCover[101X
   
-  [29X[2XPqPCover[102X( [3XF:[103X [3Xoptions[103X ) [32X function
+  [33X[1;0Y[29X[2XPqPCover[102X( [3XF:[103X [3Xoptions[103X ) [32X function[133X
   
   [33X[0;0Yreturns  for the fp or pc group [3XF[103X, the [22Xp[122X-covering group of the [22Xp[122X-quotient of
   [3XF[103X  specified  by  [3Xoptions[103X,  as  a pc group, i.e. the [22Xp[122X-covering group of the
@@ -299,8 +299,8 @@
   
   [1X4.2-1 PqStandardPresentation[101X
   
-  [29X[2XPqStandardPresentation[102X( [3XF:[103X [3Xoptions[103X ) [32X function
-  [29X[2XStandardPresentation[102X( [3XF:[103X [3Xoptions[103X ) [32X method
+  [33X[1;0Y[29X[2XPqStandardPresentation[102X( [3XF:[103X [3Xoptions[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XStandardPresentation[102X( [3XF:[103X [3Xoptions[103X ) [32X method[133X
   
   [33X[0;0Yreturn  the [3Xp[103X-quotient specified by [3Xoptions[103X of the fp or pc [22Xp[122X-group [3XF[103X, as an
   [13Xfp  group[113X  which has a standard presentation. Here [3Xoptions[103X is a selection of
@@ -396,8 +396,8 @@
   
   [1X4.2-2 EpimorphismPqStandardPresentation[101X
   
-  [29X[2XEpimorphismPqStandardPresentation[102X( [3XF:[103X [3Xoptions[103X ) [32X function
-  [29X[2XEpimorphismStandardPresentation[102X( [3XF:[103X [3Xoptions[103X ) [32X method
+  [33X[1;0Y[29X[2XEpimorphismPqStandardPresentation[102X( [3XF:[103X [3Xoptions[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XEpimorphismStandardPresentation[102X( [3XF:[103X [3Xoptions[103X ) [32X method[133X
   
   [33X[0;0YEach  of  the  above functions accepts the same arguments and options as the
   function [10XStandardPresentation[110X (see [2XStandardPresentation[102X ([14X4.2-1[114X)) and returns
@@ -456,8 +456,8 @@
   
   [1X4.3-1 IsPqIsomorphicPGroup[101X
   
-  [29X[2XIsPqIsomorphicPGroup[102X( [3XG[103X, [3XH[103X ) [32X function
-  [29X[2XIsIsomorphicPGroup[102X( [3XG[103X, [3XH[103X ) [32X method
+  [33X[1;0Y[29X[2XIsPqIsomorphicPGroup[102X( [3XG[103X, [3XH[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XIsIsomorphicPGroup[102X( [3XG[103X, [3XH[103X ) [32X method[133X
   
   [33X[0;0Yeach  return  true  if  [3XG[103X  is isomorphic to [3XH[103X, where both [3XG[103X and [3XH[103X must be pc
   groups  of prime power order. These functions compute and compare in [5XGAP[105X the
@@ -491,11 +491,11 @@
   
   [1X4.4-1 PqDescendants[101X
   
-  [29X[2XPqDescendants[102X( [3XG:[103X [3Xoptions[103X ) [32X function
+  [33X[1;0Y[29X[2XPqDescendants[102X( [3XG:[103X [3Xoptions[103X ) [32X function[133X
   
   [33X[0;0Yreturns,  for  the  pc  group  [3XG[103X  which  must be of prime power order with a
-  confluent  pc  presentation (see [2XIsConfluent[102X ([14XReference: IsConfluent (for pc
-  groups)[114X)  in the [5XGAP[105X Reference Manual), a list of descendants (pc groups) of
+  confluent  pc  presentation  (see [2XIsConfluent[102X ([14XReference: IsConfluent for pc
+  groups[114X)  in  the [5XGAP[105X Reference Manual), a list of descendants (pc groups) of
   [3XG[103X.  Following  the  colon  [3Xoptions[103X  a  selection of the options listed below
   should   be   given,   separated  by  commas  like  record  components  (see
   Section [14XReference:  Function Call With Options[114X in the [5XGAP[105X Reference Manual).
@@ -626,7 +626,7 @@
   
   [1X4.4-2 PqSupplementInnerAutomorphisms[101X
   
-  [29X[2XPqSupplementInnerAutomorphisms[102X( [3XD[103X ) [32X function
+  [33X[1;0Y[29X[2XPqSupplementInnerAutomorphisms[102X( [3XD[103X ) [32X function[133X
   
   [33X[0;0Yreturns  a  generating set for a supplement to the inner automorphisms of [3XD[103X,
   in  the  form  of  a  record  with  fields  [10XagAutos[110X, [10XagOrder[110X and [10XglAutos[110X, as
@@ -672,7 +672,7 @@
   
   [1X4.4-3 PqList[101X
   
-  [29X[2XPqList[102X( [3Xfilename:[103X [[3XSubList[103X [3X:=[103X [3Xsub[103X] ) [32X function
+  [33X[1;0Y[29X[2XPqList[102X( [3Xfilename:[103X [[3XSubList[103X [3X:=[103X [3Xsub[103X] ) [32X function[133X
   
   [33X[0;0Yreads  a  file  with  name  [3Xfilename[103X (a string) and returns the list [3XL[103X of pc
   groups  (or  with  option  [10XSubList[110X a sublist of [3XL[103X or a single pc group in [3XL[103X)
@@ -686,7 +686,7 @@
   
   [1X4.4-4 SavePqList[101X
   
-  [29X[2XSavePqList[102X( [3Xfilename[103X, [3Xlist[103X ) [32X function
+  [33X[1;0Y[29X[2XSavePqList[102X( [3Xfilename[103X, [3Xlist[103X ) [32X function[133X
   
   [33X[0;0Ywrites a list of descendants [3Xlist[103X to a file with name [3Xfilename[103X (a string).[133X
   

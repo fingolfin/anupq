@@ -83,7 +83,7 @@
   
   [1X3.2-1 ANUPQData[101X
   
-  [29X[2XANUPQData[102X[32X global variable
+  [33X[1;0Y[29X[2XANUPQData[102X[32X global variable[133X
   
   [33X[0;0Yis  a [5XGAP[105X record in which the essential data for an [5XANUPQ[105X session within [5XGAP[105X
   is stored; its fields are:[133X
@@ -242,7 +242,7 @@
   
   [1X3.2-2 ANUPQDirectoryTemporary[101X
   
-  [29X[2XANUPQDirectoryTemporary[102X( [3Xdir[103X ) [32X function
+  [33X[1;0Y[29X[2XANUPQDirectoryTemporary[102X( [3Xdir[103X ) [32X function[133X
   
   [33X[0;0Ycalls  the  UNIX command [10Xmkdir[110X to create [3Xdir[103X, which must be a string, and if
   successful  a  directory object for [3Xdir[103X is both assigned to [10XANUPQData.tmpdir[110X
@@ -258,7 +258,7 @@
   
   [1X3.3-1 InfoANUPQ[101X
   
-  [29X[2XInfoANUPQ[102X[32X info class
+  [33X[1;0Y[29X[2XInfoANUPQ[102X[32X info class[133X
   
   [33X[0;0YThe  input  to  and  the  output  from  the  [10Xpq[110X  program is, by default, not
   displayed.  However  the  user  may  choose  to  see  some,  or all, of this
@@ -329,7 +329,7 @@
   
   [1X3.4-1 PqLeftNormComm[101X
   
-  [29X[2XPqLeftNormComm[102X( [3Xelts[103X ) [32X function
+  [33X[1;0Y[29X[2XPqLeftNormComm[102X( [3Xelts[103X ) [32X function[133X
   
   [33X[0;0Yreturns  for  a  list  of elements of some group (e.g. [3Xelts[103X may be a list of
   words in the generators of a free or fp group) the left normed commutator of
@@ -340,7 +340,7 @@
   
   [1X3.4-2 PqGAPRelators[101X
   
-  [29X[2XPqGAPRelators[102X( [3Xgroup[103X, [3Xrels[103X ) [32X function
+  [33X[1;0Y[29X[2XPqGAPRelators[102X( [3Xgroup[103X, [3Xrels[103X ) [32X function[133X
   
   [33X[0;0Yreturns  a  list of words that [5XGAP[105X understands, given a list [3Xrels[103X of strings
   in  the  string  representations  of  the  generators  of the fp group [3Xgroup[103X
@@ -365,7 +365,7 @@
   
   [1X3.4-3 PqParseWord[101X
   
-  [29X[2XPqParseWord[102X( [3Xword[103X, [3Xn[103X ) [32X function
+  [33X[1;0Y[29X[2XPqParseWord[102X( [3Xword[103X, [3Xn[103X ) [32X function[133X
   
   [33X[0;0Yparses  a [3Xword[103X, a string representing a word in the pc generators [10Xx1,...,x[3Xn[103X[10X[110X,
   through  [5XGAP[105X.  This  function is provided as a rough-and-ready check of [3Xword[103X
@@ -380,9 +380,9 @@
   
   [1X3.4-4 PqExample[101X
   
-  [29X[2XPqExample[102X(  ) [32X function
-  [29X[2XPqExample[102X( [3Xexample[103X[, [3XPqStart[103X][, [3XDisplay[103X] ) [32X function
-  [29X[2XPqExample[102X( [3Xexample[103X[, [3XPqStart[103X][, [3Xfilename[103X] ) [32X function
+  [33X[1;0Y[29X[2XPqExample[102X(  ) [32X function[133X
+  [33X[1;0Y[29X[2XPqExample[102X( [3Xexample[103X[, [3XPqStart[103X][, [3XDisplay[103X] ) [32X function[133X
+  [33X[1;0Y[29X[2XPqExample[102X( [3Xexample[103X[, [3XPqStart[103X][, [3Xfilename[103X] ) [32X function[133X
   
   [33X[0;0YWith no arguments, or with single argument [10X"index"[110X, or a string [3Xexample[103X that
   is  not  the name of a file in the [10Xexamples[110X directory, an index of available
@@ -418,14 +418,14 @@
   
   [1X3.4-5 AllPqExamples[101X
   
-  [29X[2XAllPqExamples[102X(  ) [32X function
+  [33X[1;0Y[29X[2XAllPqExamples[102X(  ) [32X function[133X
   
   [33X[0;0Yreturns  a  list of all currently available examples in default UNIX-listing
   (i.e. alphabetic) order.[133X
   
   [1X3.4-6 GrepPqExamples[101X
   
-  [29X[2XGrepPqExamples[102X( [3Xstring[103X ) [32X function
+  [33X[1;0Y[29X[2XGrepPqExamples[102X( [3Xstring[103X ) [32X function[133X
   
   [33X[0;0Yruns  the  UNIX  command [10Xgrep [3Xstring[103X[10X[110X over the [5XANUPQ[105X examples and returns the
   list  of examples for which there is a match. The actual matches are [10XInfo[110X-ed
@@ -433,7 +433,7 @@
   
   [1X3.4-7 ToPQLog[101X
   
-  [29X[2XToPQLog[102X( [[3Xfilename[103X] ) [32X function
+  [33X[1;0Y[29X[2XToPQLog[102X( [[3Xfilename[103X] ) [32X function[133X
   
   [33X[0;0YWith string argument [3Xfilename[103X, [10XToPQLog[110X opens the file with name [3Xfilename[103X for
   logging;  all  commands  written to the [10Xpq[110X binary (that are [10XInfo[110X-ed behind a
@@ -447,9 +447,9 @@
   
   [1X3.5-1 NuclearRank[101X
   
-  [29X[2XNuclearRank[102X( [3XG[103X ) [32X attribute
-  [29X[2XMultiplicatorRank[102X( [3XG[103X ) [32X attribute
-  [29X[2XIsCapable[102X( [3XG[103X ) [32X property
+  [33X[1;0Y[29X[2XNuclearRank[102X( [3XG[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XMultiplicatorRank[102X( [3XG[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XIsCapable[102X( [3XG[103X ) [32X property[133X
   
   [33X[0;0Yreturn  the  nuclear  rank of [3XG[103X, [22Xp[122X-multiplicator rank of [3XG[103X, and whether [3XG[103X is
   capable (i.e. [9Xtrue[109X if it is, or [9Xfalse[109X if it is not), respectively.[133X
@@ -478,7 +478,7 @@
   typing[133X
   
   [4X[32X[104X
-    [4XSetFeatureObj( G, IsPGroup, true );[104X
+    [4XSetIsPGroup( G, true );[104X
   [4X[32X[104X
   
   [33X[0;0Yor  by  invoking  [10XIsPGroup( [3XG[103X[10X )[110X. Note that for an fp group [3XG[103X, the latter may
@@ -554,7 +554,7 @@
   
   [1X3.6-1 ANUPQWarnOfOtherOptions[101X
   
-  [29X[2XANUPQWarnOfOtherOptions[102X[32X global variable
+  [33X[1;0Y[29X[2XANUPQWarnOfOtherOptions[102X[32X global variable[133X
   
   [33X[0;0Yis a global variable that is by default [9Xfalse[109X. If it is set to [9Xtrue[109X then any
   function provided by the [5XANUPQ[105X function that recognises at least one option,

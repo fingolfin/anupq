@@ -161,10 +161,10 @@ pq program</span></a>
 
 <h5>5.1-1 PqStart</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqStart</code>( <var class="Arg">G</var>, <var class="Arg">workspace:</var> <var class="Arg">options</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqStart</code>( <var class="Arg">G:</var> <var class="Arg">options</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqStart</code>( <var class="Arg">workspace:</var> <var class="Arg">options</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqStart</code>( <var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqStart</code>( <var class="Arg">G</var>, <var class="Arg">workspace:</var> <var class="Arg">options</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqStart</code>( <var class="Arg">G:</var> <var class="Arg">options</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqStart</code>( <var class="Arg">workspace:</var> <var class="Arg">options</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqStart</code>( <var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>activate an iostream for an interactive <strong class="pkg">ANUPQ</strong> process (i.e. <code class="code">PqStart</code> starts up a <code class="code">pq</code> process and opens a <strong class="pkg">GAP</strong> iostream to "talk" to that process) and returns an integer <var class="Arg">i</var> that can be used to identify that process. The argument <var class="Arg">G</var> should be an <em>fp group</em> or <em>pc group</em> that the user intends to manipulate using interactive <strong class="pkg">ANUPQ</strong> functions. If the function is called without specifying <var class="Arg">G</var>, a group can be read in by using the function <code class="code">PqRestorePcPresentation</code> (see <code class="func">PqRestorePcPresentation</code> (<a href="chap5_mj.html#X7FD001C0798EF219"><span class="RefLink">5.6-3</span></a>)). If <code class="code">PqStart</code> is given an integer argument <var class="Arg">workspace</var>, then the <code class="code">pq</code> program is started up with a workspace (an integer array) of size <var class="Arg">workspace</var> (i.e. <span class="SimpleMath">\(4 \times \textit{workspace}\)</span> bytes in a 32-bit environment); otherwise, the <code class="code">pq</code> program sets a default workspace of <span class="SimpleMath">\(10000000\)</span>.</p>
 
 <p>The only <var class="Arg">options</var> currently recognised by <code class="code">PqStart</code> are <code class="code">Prime</code>, <code class="code">Exponent</code> and <code class="code">Relators</code> (see Chapter <a href="chap6_mj.html#X7B0946E97E7EB359"><span class="RefLink"><span class="Heading">ANUPQ Options</span></span></a> for detailed descriptions of these options) and if provided they are essentially global for the interactive <strong class="pkg">ANUPQ</strong> process, except that any interactive function interacting with the process and passing new values for these options will over-ride the global values.</p>
@@ -173,8 +173,8 @@ pq program</span></a>
 
 <h5>5.1-2 PqQuit</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqQuit</code>( <var class="Arg">i</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqQuit</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqQuit</code>( <var class="Arg">i</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqQuit</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>closes the stream of the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process and unbinds its <code class="code">ANUPQData.io</code> record.</p>
 
 <p><em>Note:</em> It can happen that the <code class="code">pq</code> process, and hence the <strong class="pkg">GAP</strong> iostream assigned to communicate with it, can die, e.g. by the user typing a <code class="code">Ctrl-C</code> while the <code class="code">pq</code> process is engaged in a long calculation. <code class="code">IsPqProcessAlive</code> (see <code class="func">IsPqProcessAlive</code> (<a href="chap5_mj.html#X7C103DF78435AEC7"><span class="RefLink">5.2-3</span></a>)) is provided to check the status of the <strong class="pkg">GAP</strong> iostream (and hence the status of the <code class="code">pq</code> process it was communicating with).</p>
@@ -183,7 +183,7 @@ pq program</span></a>
 
 <h5>5.1-3 PqQuitAll</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqQuitAll</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqQuitAll</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>is provided as a convenience, to terminate all active interactive <strong class="pkg">ANUPQ</strong> processes with a single command. It is equivalent to executing <code class="code">PqQuit(<var class="Arg">i</var>)</code> for all active interactive <strong class="pkg">ANUPQ</strong> processes <var class="Arg">i</var> (see <code class="func">PqQuit</code> (<a href="chap5_mj.html#X79DB761185BAB9C8"><span class="RefLink">5.1-2</span></a>)).</p>
 
 <p><a id="X7EE8000A800CEE2D" name="X7EE8000A800CEE2D"></a></p>
@@ -194,8 +194,8 @@ pq program</span></a>
 
 <h5>5.2-1 PqProcessIndex</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqProcessIndex</code>( <var class="Arg">i</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqProcessIndex</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqProcessIndex</code>( <var class="Arg">i</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqProcessIndex</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>With argument <var class="Arg">i</var>, which must be a positive integer, <code class="code">PqProcessIndex</code> returns <var class="Arg">i</var> if it corresponds to an active interactive process, or raises an error. With no arguments it returns the default active interactive process or returns <code class="keyw">fail</code> and emits a warning message to <code class="code">Info</code> at <code class="code">InfoANUPQ</code> or <code class="code">InfoWarning</code> level 1.</p>
 
 <p><em>Note:</em> Essentially, an interactive <strong class="pkg">ANUPQ</strong> process <var class="Arg">i</var> is "active" if <code class="code">ANUPQData.io[<var class="Arg">i</var>]</code> is bound (i.e. we still have some data telling us about it). Also see <code class="func">PqStart</code> (<a href="chap5_mj.html#X83B2EC237F37623C"><span class="RefLink">5.1-1</span></a>).</p>
@@ -204,15 +204,15 @@ pq program</span></a>
 
 <h5>5.2-2 PqProcessIndices</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqProcessIndices</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqProcessIndices</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>returns the list of integer indices of all active interactive <strong class="pkg">ANUPQ</strong> processes (see <code class="func">PqProcessIndex</code> (<a href="chap5_mj.html#X8558B20A80B999AE"><span class="RefLink">5.2-1</span></a>) for the meaning of "active").</p>
 
 <p><a id="X7C103DF78435AEC7" name="X7C103DF78435AEC7"></a></p>
 
 <h5>5.2-3 IsPqProcessAlive</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsPqProcessAlive</code>( <var class="Arg">i</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsPqProcessAlive</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsPqProcessAlive</code>( <var class="Arg">i</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsPqProcessAlive</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>return <code class="keyw">true</code> if the <strong class="pkg">GAP</strong> iostream of the <var class="Arg">i</var>th (or default) interactive <strong class="pkg">ANUPQ</strong> process started by <code class="code">PqStart</code> is alive (i.e. can still be written to), or <code class="keyw">false</code>, otherwise. (See the notes for <code class="func">PqStart</code> (<a href="chap5_mj.html#X83B2EC237F37623C"><span class="RefLink">5.1-1</span></a>) and <code class="func">PqQuit</code> (<a href="chap5_mj.html#X79DB761185BAB9C8"><span class="RefLink">5.1-2</span></a>).)</p>
 
 <p>If the user does not yet have a <code class="code">gap&gt;</code> prompt then usually the <code class="code">pq</code> program is still away doing something and an <strong class="pkg">ANUPQ</strong> interface function is still waiting for a reply. Typing a <code class="code">Ctrl-C</code> (i.e. holding down the <code class="code">Ctrl</code> key and typing <code class="code">c</code>) will stop the waiting and send <strong class="pkg">GAP</strong> into a <code class="code">break</code>-loop, from which one has no option but to <code class="code">quit;</code>. The typing of <code class="code">Ctrl-C</code>, in such a circumstance, usually causes the stream of the interactive <strong class="pkg">ANUPQ</strong> process to die; to check this we provide <code class="code">IsPqProcessAlive</code> (see <code class="func">IsPqProcessAlive</code>).</p>
@@ -227,8 +227,8 @@ pq program</span></a>
 
 <h5>5.3-1 Pq</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Pq</code>( <var class="Arg">i:</var> <var class="Arg">options</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Pq</code>( <var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Pq</code>( <var class="Arg">i:</var> <var class="Arg">options</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Pq</code>( <var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>return, for the fp or pc group (let us call it <var class="Arg">F</var>), of the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, the <span class="SimpleMath">\(p\)</span>-quotient of <var class="Arg">F</var> specified by <var class="Arg">options</var>, as a pc group; <var class="Arg">F</var> must previously have been given (as first argument) to <code class="code">PqStart</code> to start the interactive <strong class="pkg">ANUPQ</strong> process (see <code class="func">PqStart</code> (<a href="chap5_mj.html#X83B2EC237F37623C"><span class="RefLink">5.1-1</span></a>)) or restored from file using the function <code class="code">PqRestorePcPresentation</code> (see <code class="func">PqRestorePcPresentation</code> (<a href="chap5_mj.html#X7FD001C0798EF219"><span class="RefLink">5.6-3</span></a>)). Following the colon <var class="Arg">options</var> is a selection of the options listed for the non-interactive <code class="code">Pq</code> function (see <code class="func">Pq</code> (<a href="chap4_mj.html#X86DD32D5803CF2C8"><span class="RefLink">4.1-1</span></a>)), separated by commas like record components (see Section <a href="https://www.gap-system.org/Manuals/doc/ref/chap4_mj.html#X867D54987EF86D1D"><span class="RefLink">Reference: Function Call With Options</span></a> in the <strong class="pkg">GAP</strong> Reference Manual), except that the options <code class="code">SetupFile</code> or <code class="code">PqWorkspace</code> are ignored by the interactive <code class="code">Pq</code>, and <code class="code">RedoPcp</code> is an option only recognised by the interactive <code class="code">Pq</code> i.e. the following options are recognised by the interactive <code class="code">Pq</code> function:</p>
 
 
@@ -306,8 +306,8 @@ pq program</span></a>
 
 <h5>5.3-2 PqEpimorphism</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqEpimorphism</code>( <var class="Arg">i:</var> <var class="Arg">options</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqEpimorphism</code>( <var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqEpimorphism</code>( <var class="Arg">i:</var> <var class="Arg">options</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqEpimorphism</code>( <var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>return, for the fp or pc group (let us call it <var class="Arg">F</var>), of the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, an epimorphism from <var class="Arg">F</var> onto the <span class="SimpleMath">\(p\)</span>-quotient of <var class="Arg">F</var> specified by <var class="Arg">options</var>; <var class="Arg">F</var> must previously have been given (as first argument) to <code class="code">PqStart</code> to start the interactive <strong class="pkg">ANUPQ</strong> process (see <code class="func">PqStart</code> (<a href="chap5_mj.html#X83B2EC237F37623C"><span class="RefLink">5.1-1</span></a>)). Since the underlying interactions with the <code class="code">pq</code> program effected by the interactive <code class="code">PqEpimorphism</code> are identical to those effected by the interactive <code class="code">Pq</code>, everything said regarding the requirements and behaviour of the interactive <code class="code">Pq</code> function (see <code class="func">Pq</code> (<a href="chap5_mj.html#X85408C4C790439E7"><span class="RefLink">5.3-1</span></a>)) is also the case for the interactive <code class="code">PqEpimorphism</code>.</p>
 
 <p><em>Note:</em> See Section <a href="chap3_mj.html#X818175EF85CAA807"><span class="RefLink"><span class="Heading">Attributes and a Property for fp and pc p-groups</span></span></a> for the attributes and property <code class="code">NuclearRank</code>, <code class="code">MultiplicatorRank</code> and <code class="code">IsCapable</code> which may be applied to the image group of the epimorphism returned by <code class="code">PqEpimorphism</code>.</p>
@@ -316,8 +316,8 @@ pq program</span></a>
 
 <h5>5.3-3 PqPCover</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPCover</code>( <var class="Arg">i:</var> <var class="Arg">options</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPCover</code>( <var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPCover</code>( <var class="Arg">i:</var> <var class="Arg">options</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPCover</code>( <var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>return, for the fp or pc group of the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, the <span class="SimpleMath">\(p\)</span>-covering group of the <span class="SimpleMath">\(p\)</span>-quotient <code class="code">Pq(<var class="Arg">i</var> : <var class="Arg">options</var>)</code> or <code class="code">Pq(: <var class="Arg">options</var>)</code>, modulo the following:</p>
 
 <ol>
@@ -352,8 +352,8 @@ PqPCover(i);
 
 <h5>5.3-4 PqStandardPresentation</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqStandardPresentation</code>( [<var class="Arg">i</var>]<var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; StandardPresentation</code>( [<var class="Arg">i</var>]<var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqStandardPresentation</code>( [<var class="Arg">i</var>]<var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; StandardPresentation</code>( [<var class="Arg">i</var>]<var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>return, for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, the <var class="Arg">p</var>-quotient of the group <var class="Arg">F</var> of the process, specified by <var class="Arg">options</var>, as an <em>fp group</em> which has a standard presentation. Here <var class="Arg">options</var> is a selection of the options from the following list (see Chapter <a href="chap6_mj.html#X7B0946E97E7EB359"><span class="RefLink"><span class="Heading">ANUPQ Options</span></span></a> for detailed descriptions); this list is the same as for the non-interactive version of <code class="code">PqStandardPresentation</code> except for the omission of options <code class="code">SetupFile</code> and <code class="code">PqWorkspace</code> (see <code class="func">PqStandardPresentation</code> (<a href="chap4_mj.html#X86C9575D7CB65FBB"><span class="RefLink">4.2-1</span></a>)).</p>
 
 
@@ -417,8 +417,8 @@ PqPCover(i);
 
 <h5>5.3-5 EpimorphismPqStandardPresentation</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; EpimorphismPqStandardPresentation</code>( [<var class="Arg">i</var>]<var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; EpimorphismStandardPresentation</code>( [<var class="Arg">i</var>]<var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; EpimorphismPqStandardPresentation</code>( [<var class="Arg">i</var>]<var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; EpimorphismStandardPresentation</code>( [<var class="Arg">i</var>]<var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
 <p>Each of the above functions accepts the same arguments and options as the interactive form of <code class="code">StandardPresentation</code> (see <code class="func">StandardPresentation</code> (<a href="chap5_mj.html#X805F32618005C087"><span class="RefLink">5.3-4</span></a>)) and returns an epimorphism from the fp or pc group <var class="Arg">F</var> of the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process onto the finitely presented group given by a standard presentation, i.e. if <var class="Arg">S</var> is the standard presentation computed for the <span class="SimpleMath">\(p\)</span>-quotient of <var class="Arg">F</var> by <code class="code">StandardPresentation</code> then <code class="code">EpimorphismStandardPresentation</code> returns the epimorphism from <var class="Arg">F</var> to the group with presentation <var class="Arg">S</var>. The group <var class="Arg">F</var> must have been given (as first argument) to <code class="code">PqStart</code> to start the interactive <strong class="pkg">ANUPQ</strong> process (see <code class="func">PqStart</code> (<a href="chap5_mj.html#X83B2EC237F37623C"><span class="RefLink">5.1-1</span></a>)).</p>
 
 <p>Taking our earlier non-interactive example (see <code class="func">EpimorphismPqStandardPresentation</code> (<a href="chap4_mj.html#X828C06D083C0D089"><span class="RefLink">4.2-2</span></a>)) and modifying it a little, we illustrate, as for the interactive <code class="code">StandardPresentation</code> (see <code class="func">StandardPresentation</code> (<a href="chap5_mj.html#X805F32618005C087"><span class="RefLink">5.3-4</span></a>)), how something that required two separate calls to the <code class="code">pq</code> program can now be achieved with a dialogue with just one <code class="code">pq</code> process. Also, observe that calls to one of the standard presentation functions (as mentioned in the notes of <code class="func">StandardPresentation</code> (<a href="chap5_mj.html#X805F32618005C087"><span class="RefLink">5.3-4</span></a>)) computes and stores both an fp group with a standard presentation and an epimorphism; subsequent calls to a standard presentation function for the same process simply return the appropriate stored value.</p>
@@ -473,9 +473,9 @@ PqPCover(i);
 
 <h5>5.3-6 PqDescendants</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqDescendants</code>( <var class="Arg">i:</var> <var class="Arg">options</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqDescendants</code>( <var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<p>return for the pc group <var class="Arg">G</var> of the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, which must be of prime power order with a confluent pc presentation (see <code class="func">IsConfluent</code> (<a href="https://www.gap-system.org/Manuals/doc/ref/chap46_mj.html#X7DF4835F79667099"><span class="RefLink">Reference: IsConfluent (for pc groups)</span></a>) in the <strong class="pkg">GAP</strong> Reference Manual), a list of descendants (pc groups) of <var class="Arg">G</var>. The group <var class="Arg">G</var> is usually given as first argument to <code class="code">PqStart</code> when starting the interactive <strong class="pkg">ANUPQ</strong> process (see <code class="func">PqStart</code> (<a href="chap5_mj.html#X83B2EC237F37623C"><span class="RefLink">5.1-1</span></a>)). Alternatively, one may initiate the process with an fp group, use <code class="code">Pq</code> interactively (see <code class="func">Pq</code> (<a href="chap5_mj.html#X85408C4C790439E7"><span class="RefLink">5.3-1</span></a>)) to create a pc group and use <code class="code">PqSetPQuotientToGroup</code> (see <code class="func">PqSetPQuotientToGroup</code> (<a href="chap5_mj.html#X80CCF6D379E5A3B4"><span class="RefLink">5.3-7</span></a>)), which involves <em>no</em> computation, to set the pc group returned by <code class="code">Pq</code> as the group of the process. Note that repeating a call to <code class="code">PqDescendants</code> for the same interactive <strong class="pkg">ANUPQ</strong> process simply returns the list of descendants originally calculated; a warning is emitted at <code class="code">InfoANUPQ</code> level 1 reminding you of this should you do this.</p>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqDescendants</code>( <var class="Arg">i:</var> <var class="Arg">options</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqDescendants</code>( <var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>return for the pc group <var class="Arg">G</var> of the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, which must be of prime power order with a confluent pc presentation (see <code class="func">IsConfluent</code> (<a href="https://www.gap-system.org/Manuals/doc/ref/chap46_mj.html#X7DF4835F79667099"><span class="RefLink">Reference: IsConfluent for pc groups</span></a>) in the <strong class="pkg">GAP</strong> Reference Manual), a list of descendants (pc groups) of <var class="Arg">G</var>. The group <var class="Arg">G</var> is usually given as first argument to <code class="code">PqStart</code> when starting the interactive <strong class="pkg">ANUPQ</strong> process (see <code class="func">PqStart</code> (<a href="chap5_mj.html#X83B2EC237F37623C"><span class="RefLink">5.1-1</span></a>)). Alternatively, one may initiate the process with an fp group, use <code class="code">Pq</code> interactively (see <code class="func">Pq</code> (<a href="chap5_mj.html#X85408C4C790439E7"><span class="RefLink">5.3-1</span></a>)) to create a pc group and use <code class="code">PqSetPQuotientToGroup</code> (see <code class="func">PqSetPQuotientToGroup</code> (<a href="chap5_mj.html#X80CCF6D379E5A3B4"><span class="RefLink">5.3-7</span></a>)), which involves <em>no</em> computation, to set the pc group returned by <code class="code">Pq</code> as the group of the process. Note that repeating a call to <code class="code">PqDescendants</code> for the same interactive <strong class="pkg">ANUPQ</strong> process simply returns the list of descendants originally calculated; a warning is emitted at <code class="code">InfoANUPQ</code> level 1 reminding you of this should you do this.</p>
 
 <p>After the colon, <var class="Arg">options</var> a selection of the options listed for the non-interactive <code class="code">PqDescendants</code> function (see <code class="func">PqDescendants</code> (<a href="chap4_mj.html#X80985CC479CD9FA3"><span class="RefLink">4.4-1</span></a>)), should be given, separated by commas like record components (see Section <a href="https://www.gap-system.org/Manuals/doc/ref/chap4_mj.html#X867D54987EF86D1D"><span class="RefLink">Reference: Function Call With Options</span></a> in the <strong class="pkg">GAP</strong> Reference Manual), except that the options <code class="code">SetupFile</code> or <code class="code">PqWorkspace</code> are ignored by the interactive <code class="code">PqDescendants</code>, i.e. the following options are recognised by the interactive <code class="code">PqDescendants</code> function:</p>
 
@@ -602,8 +602,8 @@ PqPCover(i);
 
 <h5>5.3-7 PqSetPQuotientToGroup</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSetPQuotientToGroup</code>( <var class="Arg">i</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSetPQuotientToGroup</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSetPQuotientToGroup</code>( <var class="Arg">i</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSetPQuotientToGroup</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, set the <span class="SimpleMath">\(p\)</span>-quotient previously computed by the interactive <code class="code">Pq</code> function (see <code class="func">Pq</code> (<a href="chap5_mj.html#X85408C4C790439E7"><span class="RefLink">5.3-1</span></a>)) to be the group of the process. This function is supplied to enable the computation of descendants of a <span class="SimpleMath">\(p\)</span>-quotient that is already known to the <code class="code">pq</code> program, via the interactive <code class="code">PqDescendants</code> function (see <code class="func">PqDescendants</code> (<a href="chap5_mj.html#X795817217C53AB89"><span class="RefLink">5.3-6</span></a>)), thus avoiding the need to re-submit it and have the <code class="code">pq</code> program recompute it.</p>
 
 <p><em>Note:</em> See the function <code class="code">PqPGSetDescendantToPcp</code> (<code class="func">PqPGSetDescendantToPcp</code> (<a href="chap5_mj.html#X7E9D511385D48A98"><span class="RefLink">5.9-4</span></a>)) for a mechanism to make (the <span class="SimpleMath">\(p\)</span>-cover of) a particular descendants the current group of the process.</p>
@@ -654,48 +654,48 @@ pq program</span></h4>
 
 <h5>5.5-1 PqNrPcGenerators</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqNrPcGenerators</code>( <var class="Arg">i</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqNrPcGenerators</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqNrPcGenerators</code>( <var class="Arg">i</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqNrPcGenerators</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, return the number of pc generators of the lower exponent <span class="SimpleMath">\(p\)</span>-class quotient of the group currently determined by the process. This also applies if the pc presentation is not consistent.</p>
 
 <p><a id="X87FF98867E8FFB3C" name="X87FF98867E8FFB3C"></a></p>
 
 <h5>5.5-2 PqFactoredOrder</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqFactoredOrder</code>( <var class="Arg">i</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqFactoredOrder</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqFactoredOrder</code>( <var class="Arg">i</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqFactoredOrder</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, return an integer pair <code class="code">[<var class="Arg">p</var>, <var class="Arg">n</var>]</code> where <var class="Arg">p</var> is a prime and <var class="Arg">n</var> is the number of pc generators (see <code class="func">PqNrPcGenerators</code> (<a href="chap5_mj.html#X7DE2F6C686C672DD"><span class="RefLink">5.5-1</span></a>)) in the pc presentation of the quotient group currently determined by the process. If this presentation is consistent, then <span class="SimpleMath">\(p^n\)</span> is the order of the quotient group. Otherwise (if tails have been added but the necessary consistency checks, relation collections, exponent law checks and redundant generator eliminations have not yet been done), <span class="SimpleMath">\(p^n\)</span> is an upper bound for the order of the group.</p>
 
 <p><a id="X7B4FC9E380001A71" name="X7B4FC9E380001A71"></a></p>
 
 <h5>5.5-3 PqOrder</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqOrder</code>( <var class="Arg">i</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqOrder</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqOrder</code>( <var class="Arg">i</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqOrder</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, return <span class="SimpleMath">\(p^n\)</span> where <code class="code">[<var class="Arg">p</var>, <var class="Arg">n</var>]</code> is the pair as returned by <code class="code">PqFactoredOrder</code> (see <code class="func">PqFactoredOrder</code> (<a href="chap5_mj.html#X87FF98867E8FFB3C"><span class="RefLink">5.5-2</span></a>)).</p>
 
 <p><a id="X87C7F7EB7C10DC4B" name="X87C7F7EB7C10DC4B"></a></p>
 
 <h5>5.5-4 PqPClass</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPClass</code>( <var class="Arg">i</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPClass</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPClass</code>( <var class="Arg">i</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPClass</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, return the lower exponent <span class="SimpleMath">\(p\)</span>-class of the quotient group currently determined by the process.</p>
 
 <p><a id="X7EA3B6917908C20A" name="X7EA3B6917908C20A"></a></p>
 
 <h5>5.5-5 PqWeight</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqWeight</code>( <var class="Arg">i</var>, <var class="Arg">j</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqWeight</code>( <var class="Arg">j</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqWeight</code>( <var class="Arg">i</var>, <var class="Arg">j</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqWeight</code>( <var class="Arg">j</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, return the weight of the <var class="Arg">j</var>th pc generator of the lower exponent <span class="SimpleMath">\(p\)</span>-class quotient of the group currently determined by the process, or <code class="keyw">fail</code> if there is no such numbered pc generator.</p>
 
 <p><a id="X79862B83817E20E1" name="X79862B83817E20E1"></a></p>
 
 <h5>5.5-6 PqCurrentGroup</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqCurrentGroup</code>( <var class="Arg">i</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqCurrentGroup</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqCurrentGroup</code>( <var class="Arg">i</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqCurrentGroup</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, return the group whose pc presentation is determined by the process as a <strong class="pkg">GAP</strong> pc group (either a lower exponent <span class="SimpleMath">\(p\)</span>-class quotient of the start group or the <span class="SimpleMath">\(p\)</span>-cover of such a quotient).</p>
 
 <p><em>Notes:</em> See Section <a href="chap3_mj.html#X818175EF85CAA807"><span class="RefLink"><span class="Heading">Attributes and a Property for fp and pc p-groups</span></span></a> for the attributes and property <code class="code">NuclearRank</code>, <code class="code">MultiplicatorRank</code> and <code class="code">IsCapable</code> which may be applied to the group returned by <code class="code">PqCurrentGroup</code>.</p>
@@ -704,8 +704,8 @@ pq program</span></h4>
 
 <h5>5.5-7 PqDisplayPcPresentation</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqDisplayPcPresentation</code>( <var class="Arg">i:</var> [<var class="Arg">OutputLevel</var> <var class="Arg">:=</var> <var class="Arg">lev</var>] )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqDisplayPcPresentation</code>( <var class="Arg">:</var> [<var class="Arg">OutputLevel</var> <var class="Arg">:=</var> <var class="Arg">lev</var>] )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqDisplayPcPresentation</code>( <var class="Arg">i:</var> [<var class="Arg">OutputLevel</var> <var class="Arg">:=</var> <var class="Arg">lev</var>] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqDisplayPcPresentation</code>( <var class="Arg">:</var> [<var class="Arg">OutputLevel</var> <var class="Arg">:=</var> <var class="Arg">lev</var>] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, direct the <code class="code">pq</code> program to display the pc presentation of the lower exponent <span class="SimpleMath">\(p\)</span>-class quotient of the group currently determined by the process.</p>
 
 <p>Except if the last command communicating with the <code class="code">pq</code> program was a <span class="SimpleMath">\(p\)</span>-group generation command (for which there is only a verbose output level), to set the amount of information this command displays you may wish to call <code class="code">PqSetOutputLevel</code> first (see <code class="func">PqSetOutputLevel</code> (<a href="chap5_mj.html#X80410979854280E1"><span class="RefLink">5.5-8</span></a>)), or equivalently pass the option <code class="code">OutputLevel</code> (see <a href="chap6_mj.html#X87EE6DD67C9996A3"><span class="RefLink">6.2</span></a>).</p>
@@ -716,8 +716,8 @@ pq program</span></h4>
 
 <h5>5.5-8 PqSetOutputLevel</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSetOutputLevel</code>( <var class="Arg">i</var>, <var class="Arg">lev</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSetOutputLevel</code>( <var class="Arg">lev</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSetOutputLevel</code>( <var class="Arg">i</var>, <var class="Arg">lev</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSetOutputLevel</code>( <var class="Arg">lev</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, direct the <code class="code">pq</code> program to set the output level of the <code class="code">pq</code> program to <var class="Arg">lev</var>.</p>
 
 <p><em>Note:</em> For those familiar with the <code class="code">pq</code> program, <code class="code">PqSetOutputLevel</code> performs menu item 5 of the main (or advanced) <span class="SimpleMath">\(p\)</span>-Quotient menu, or the Standard Presentation menu.</p>
@@ -726,8 +726,8 @@ pq program</span></h4>
 
 <h5>5.5-9 PqEvaluateIdentities</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqEvaluateIdentities</code>( <var class="Arg">i:</var> [<var class="Arg">Identities</var> <var class="Arg">:=</var> <var class="Arg">funcs</var>] )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqEvaluateIdentities</code>( <var class="Arg">:</var> [<var class="Arg">Identities</var> <var class="Arg">:=</var> <var class="Arg">funcs</var>] )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqEvaluateIdentities</code>( <var class="Arg">i:</var> [<var class="Arg">Identities</var> <var class="Arg">:=</var> <var class="Arg">funcs</var>] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqEvaluateIdentities</code>( <var class="Arg">:</var> [<var class="Arg">Identities</var> <var class="Arg">:=</var> <var class="Arg">funcs</var>] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, invoke the evaluation of identities defined by the <code class="code">Identities</code> option, and eliminate any redundant pc generators formed. Since a previous value of <code class="code">Identities</code> is saved in the data record of the process, it is unnecessary to pass the <code class="code">Identities</code> if set previously.</p>
 
 <p><em>Note:</em> This function is mainly implemented at the <strong class="pkg">GAP</strong> level. It does not correspond to a menu item of the <code class="code">pq</code> program.</p>
@@ -740,8 +740,8 @@ pq program</span></h4>
 
 <h5>5.6-1 PqPcPresentation</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPcPresentation</code>( <var class="Arg">i:</var> <var class="Arg">options</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPcPresentation</code>( <var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPcPresentation</code>( <var class="Arg">i:</var> <var class="Arg">options</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPcPresentation</code>( <var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, direct the <code class="code">pq</code> program to compute the pc presentation of the quotient (determined by <var class="Arg">options</var>) of the group of the process, which for process <var class="Arg">i</var> is stored as <code class="code">ANUPQData.io[<var class="Arg">i</var>].group</code>.</p>
 
 <p>The possible <var class="Arg">options</var> are the same as for the interactive <code class="code">Pq</code> (see <code class="func">Pq</code> (<a href="chap5_mj.html#X85408C4C790439E7"><span class="RefLink">5.3-1</span></a>)) function, except for <code class="code">RedoPcp</code> (which, in any case, would be superfluous), namely: <code class="code">Prime</code>, <code class="code">ClassBound</code>, <code class="code">Exponent</code>, <code class="code">Relators</code>, <code class="code">GroupName</code>, <code class="code">Metabelian</code>, <code class="code">Identities</code> and <code class="code">OutputLevel</code> (see Chapter <a href="chap6_mj.html#X7B0946E97E7EB359"><span class="RefLink"><span class="Heading">ANUPQ Options</span></span></a> for a detailed description for these options). The option <code class="code">Prime</code> is required unless already provided to <code class="code">PqStart</code>.</p>
@@ -768,8 +768,8 @@ od;
 
 <h5>5.6-2 PqSavePcPresentation</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSavePcPresentation</code>( <var class="Arg">i</var>, <var class="Arg">filename</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSavePcPresentation</code>( <var class="Arg">filename</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSavePcPresentation</code>( <var class="Arg">i</var>, <var class="Arg">filename</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSavePcPresentation</code>( <var class="Arg">filename</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, direct the <code class="code">pq</code> program to save the pc presentation previously computed for the quotient of the group of that process to the file with name <var class="Arg">filename</var>. If the first character of the string <var class="Arg">filename</var> is not <code class="code">/</code>, <var class="Arg">filename</var> is assumed to be the path of a writable file relative to the directory in which <strong class="pkg">GAP</strong> was started. A saved file may be restored by <code class="code">PqRestorePcPresentation</code> (see <code class="func">PqRestorePcPresentation</code> (<a href="chap5_mj.html#X7FD001C0798EF219"><span class="RefLink">5.6-3</span></a>)).</p>
 
 <p><em>Note:</em> For those familiar with the <code class="code">pq</code> program, <code class="code">PqSavePcPresentation</code> performs menu item 2 of the main <span class="SimpleMath">\(p\)</span>-Quotient menu.</p>
@@ -778,8 +778,8 @@ od;
 
 <h5>5.6-3 PqRestorePcPresentation</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqRestorePcPresentation</code>( <var class="Arg">i</var>, <var class="Arg">filename</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqRestorePcPresentation</code>( <var class="Arg">filename</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqRestorePcPresentation</code>( <var class="Arg">i</var>, <var class="Arg">filename</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqRestorePcPresentation</code>( <var class="Arg">filename</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, direct the <code class="code">pq</code> program to restore the pc presentation previously saved to <var class="Arg">filename</var>, by <code class="code">PqSavePcPresentation</code> (see <code class="func">PqSavePcPresentation</code> (<a href="chap5_mj.html#X7D947CEA82C44898"><span class="RefLink">5.6-2</span></a>)). If the first character of the string <var class="Arg">filename</var> is not <code class="code">/</code>, <var class="Arg">filename</var> is assumed to be the path of a readable file relative to the directory in which <strong class="pkg">GAP</strong> was started.</p>
 
 <p><em>Note:</em> For those familiar with the <code class="code">pq</code> program, <code class="code">PqRestorePcPresentation</code> performs menu item 3 of the main <span class="SimpleMath">\(p\)</span>-Quotient menu.</p>
@@ -788,8 +788,8 @@ od;
 
 <h5>5.6-4 PqNextClass</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqNextClass</code>( <var class="Arg">i:</var> [<var class="Arg">QueueFactor</var>] )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqNextClass</code>( <var class="Arg">:</var> [<var class="Arg">QueueFactor</var>] )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqNextClass</code>( <var class="Arg">i:</var> [<var class="Arg">QueueFactor</var>] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqNextClass</code>( <var class="Arg">:</var> [<var class="Arg">QueueFactor</var>] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, direct the <code class="code">pq</code> program to calculate the next class of <code class="code">ANUPQData.io[<var class="Arg">i</var>].group</code>.</p>
 
 <p><code class="code">PqNextClass</code> accepts the option <code class="code">QueueFactor</code> (see also <a href="chap6_mj.html#X87EE6DD67C9996A3"><span class="RefLink">6.2</span></a>) which should be a positive integer if automorphisms have been previously supplied. If the <code class="code">pq</code> program requires a queue factor and none is supplied via the option <code class="code">QueueFactor</code> a default of 15 is taken.</p>
@@ -814,8 +814,8 @@ PqEliminateRedundantGenerators(i);
 
 <h5>5.6-5 PqComputePCover</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqComputePCover</code>( <var class="Arg">i</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqComputePCover</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqComputePCover</code>( <var class="Arg">i</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqComputePCover</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> processi, directi, the <code class="code">pq</code> program to compute the <span class="SimpleMath">\(p\)</span>-covering group of <code class="code">ANUPQData.io[<var class="Arg">i</var>].group</code>. In contrast to the function <code class="code">PqPCover</code> (see <code class="func">PqPCover</code> (<a href="chap4_mj.html#X81C3CE1E850DA252"><span class="RefLink">4.1-3</span></a>)), this function does not return a <strong class="pkg">GAP</strong> pc group.</p>
 
 <p><em>Notes</em></p>
@@ -840,8 +840,8 @@ PqEliminateRedundantGenerators(i);
 
 <h5>5.7-1 PqCollect</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqCollect</code>( <var class="Arg">i</var>, <var class="Arg">word</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqCollect</code>( <var class="Arg">word</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqCollect</code>( <var class="Arg">i</var>, <var class="Arg">word</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqCollect</code>( <var class="Arg">word</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, instruct the <code class="code">pq</code> program to do a collection on <var class="Arg">word</var>, a word in the current pc generators (the form of <var class="Arg">word</var> required is described below). <code class="code">PqCollect</code> returns the resulting word of the collection as a list of generator number, exponent pairs (the same form as the second allowed input form of <var class="Arg">word</var>; see below).</p>
 
 <p>The argument <var class="Arg">word</var> may be input in either of the following ways:</p>
@@ -860,8 +860,8 @@ PqEliminateRedundantGenerators(i);
 
 <h5>5.7-2 PqSolveEquation</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSolveEquation</code>( <var class="Arg">i</var>, <var class="Arg">a</var>, <var class="Arg">b</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSolveEquation</code>( <var class="Arg">a</var>, <var class="Arg">b</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSolveEquation</code>( <var class="Arg">i</var>, <var class="Arg">a</var>, <var class="Arg">b</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSolveEquation</code>( <var class="Arg">a</var>, <var class="Arg">b</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, direct the <code class="code">pq</code> program to solve <span class="SimpleMath">\(\textit{a} * \textit{x} = \textit{b}\)</span> for <var class="Arg">x</var>, where <var class="Arg">a</var> and <var class="Arg">b</var> are words in the pc generators. For the representation of these words see the description of the function <code class="code">PqCollect</code> (<code class="func">PqCollect</code> (<a href="chap5_mj.html#X8633356078CA4115"><span class="RefLink">5.7-1</span></a>)).</p>
 
 <p><em>Note:</em> For those familiar with the <code class="code">pq</code> program, <code class="code">PqSolveEquation</code> performs menu item 2 of the Advanced <span class="SimpleMath">\(p\)</span>-Quotient menu.</p>
@@ -870,8 +870,8 @@ PqEliminateRedundantGenerators(i);
 
 <h5>5.7-3 PqCommutator</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqCommutator</code>( <var class="Arg">i</var>, <var class="Arg">words</var>, <var class="Arg">pow</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqCommutator</code>( <var class="Arg">words</var>, <var class="Arg">pow</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqCommutator</code>( <var class="Arg">i</var>, <var class="Arg">words</var>, <var class="Arg">pow</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqCommutator</code>( <var class="Arg">words</var>, <var class="Arg">pow</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, instruct the <code class="code">pq</code> program to compute the left normed commutator of the list <var class="Arg">words</var> of words in the current pc generators raised to the integer power <var class="Arg">pow</var>, and return the resulting word as a list of generator number, exponent pairs. The form required for each word of <var class="Arg">words</var> is the same as that required for the <var class="Arg">word</var> argument of <code class="code">PqCollect</code> (see <code class="func">PqCollect</code> (<a href="chap5_mj.html#X8633356078CA4115"><span class="RefLink">5.7-1</span></a>)). The form of the output word is also the same as for <code class="code">PqCollect</code>.</p>
 
 <p><em>Note:</em> For those familiar with the <code class="code">pq</code> program, <code class="code">PqCommutator</code> performs menu item 3 of the Advanced <span class="SimpleMath">\(p\)</span>-Quotient menu.</p>
@@ -880,8 +880,8 @@ PqEliminateRedundantGenerators(i);
 
 <h5>5.7-4 PqSetupTablesForNextClass</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSetupTablesForNextClass</code>( <var class="Arg">i</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSetupTablesForNextClass</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSetupTablesForNextClass</code>( <var class="Arg">i</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSetupTablesForNextClass</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, direct the <code class="code">pq</code> program to set up tables for the next class. As as side-effect, after <code class="code">PqSetupTablesForNextClass(<var class="Arg">i</var>)</code> the value returned by <code class="code">PqPClass(<var class="Arg">i</var>)</code> will be one more than it was previously.</p>
 
 <p><em>Note:</em> For those familiar with the <code class="code">pq</code> program, <code class="code">PqSetupTablesForNextClass</code> performs menu item 6 of the Advanced <span class="SimpleMath">\(p\)</span>-Quotient menu.</p>
@@ -890,8 +890,8 @@ PqEliminateRedundantGenerators(i);
 
 <h5>5.7-5 PqTails</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqTails</code>( <var class="Arg">i</var>, <var class="Arg">weight</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqTails</code>( <var class="Arg">weight</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqTails</code>( <var class="Arg">i</var>, <var class="Arg">weight</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqTails</code>( <var class="Arg">weight</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, direct the <code class="code">pq</code> program to compute and add tails of weight <var class="Arg">weight</var> if <var class="Arg">weight</var> is in the integer range <code class="code">[2 .. PqPClass(<var class="Arg">i</var>)]</code> (assuming <var class="Arg">i</var> is the number of the process, even in the default case) or for all weights if <code class="code"><var class="Arg">weight</var> = 0</code>.</p>
 
 <p>If <var class="Arg">weight</var> is non-zero, then tails that introduce new generators for only weight <var class="Arg">weight</var> are computed and added, and in this case and if <code class="code"><var class="Arg">weight</var> &lt; PqPClass(<var class="Arg">i</var>)</code>, it is assumed that the tails that introduce new generators for each weight from <code class="code">PqPClass(<var class="Arg">i</var>)</code> down to weight <code class="code"><var class="Arg">weight</var> + 1</code> have already been added. You may wish to call <code class="code">PqSetMetabelian</code> (see <code class="func">PqSetMetabelian</code> (<a href="chap5_mj.html#X87A35ABB7E11595E"><span class="RefLink">5.7-16</span></a>)) prior to calling <code class="code">PqTails</code>.</p>
@@ -914,8 +914,8 @@ PqAddTails(i, weight);
 
 <h5>5.7-6 PqComputeTails</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqComputeTails</code>( <var class="Arg">i</var>, <var class="Arg">weight</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqComputeTails</code>( <var class="Arg">weight</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqComputeTails</code>( <var class="Arg">i</var>, <var class="Arg">weight</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqComputeTails</code>( <var class="Arg">weight</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, direct the <code class="code">pq</code> program to compute tails of weight <var class="Arg">weight</var> if <var class="Arg">weight</var> is in the integer range <code class="code">[2 .. PqPClass(<var class="Arg">i</var>)]</code> (assuming <var class="Arg">i</var> is the number of the process, even in the default case) or for all weights if <code class="code"><var class="Arg">weight</var> = 0</code>. See <code class="code">PqTails</code> (<code class="func">PqTails</code> (<a href="chap5_mj.html#X84F7DD8582B368D3"><span class="RefLink">5.7-5</span></a>)) for more details.</p>
 
 <p><em>Note:</em> For those familiar with the <code class="code">pq</code> program, <code class="code">PqComputeTails</code> uses menu item 7 of the Advanced <span class="SimpleMath">\(p\)</span>-Quotient menu.</p>
@@ -924,8 +924,8 @@ PqAddTails(i, weight);
 
 <h5>5.7-7 PqAddTails</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqAddTails</code>( <var class="Arg">i</var>, <var class="Arg">weight</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqAddTails</code>( <var class="Arg">weight</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqAddTails</code>( <var class="Arg">i</var>, <var class="Arg">weight</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqAddTails</code>( <var class="Arg">weight</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, direct the <code class="code">pq</code> program to add the tails of weight <var class="Arg">weight</var>, previously computed by <code class="code">PqComputeTails</code> (see <code class="func">PqComputeTails</code> (<a href="chap5_mj.html#X8389F6437ED634B8"><span class="RefLink">5.7-6</span></a>)), if <var class="Arg">weight</var> is in the integer range <code class="code">[2 .. PqPClass(<var class="Arg">i</var>)]</code> (assuming <var class="Arg">i</var> is the number of the process, even in the default case) or for all weights if <code class="code"><var class="Arg">weight</var> = 0</code>. See <code class="code">PqTails</code> (<code class="func">PqTails</code> (<a href="chap5_mj.html#X84F7DD8582B368D3"><span class="RefLink">5.7-5</span></a>)) for more details.</p>
 
 <p><em>Note:</em> For those familiar with the <code class="code">pq</code> program, <code class="code">PqAddTails</code> uses menu item 7 of the Advanced <span class="SimpleMath">\(p\)</span>-Quotient menu.</p>
@@ -934,8 +934,8 @@ PqAddTails(i, weight);
 
 <h5>5.7-8 PqDoConsistencyChecks</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqDoConsistencyChecks</code>( <var class="Arg">i</var>, <var class="Arg">weight</var>, <var class="Arg">type</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqDoConsistencyChecks</code>( <var class="Arg">weight</var>, <var class="Arg">type</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqDoConsistencyChecks</code>( <var class="Arg">i</var>, <var class="Arg">weight</var>, <var class="Arg">type</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqDoConsistencyChecks</code>( <var class="Arg">weight</var>, <var class="Arg">type</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, do consistency checks for weight <var class="Arg">weight</var> if <var class="Arg">weight</var> is in the integer range <code class="code">[3 .. PqPClass(<var class="Arg">i</var>)]</code> (assuming <var class="Arg">i</var> is the number of the process) or for all weights if <code class="code"><var class="Arg">weight</var> = 0</code>, and for type <var class="Arg">type</var> if <var class="Arg">type</var> is in the range <code class="code">[1, 2, 3]</code> (see below) or for all types if <code class="code"><var class="Arg">type</var> = 0</code>. (For its use in the context of finding the next class see <code class="func">PqNextClass</code> (<a href="chap5_mj.html#X832F69597C095A27"><span class="RefLink">5.6-4</span></a>).)</p>
 
 <p>The <em>type</em> of a consistency check is defined as follows. <code class="code">PqDoConsistencyChecks(<var class="Arg">i</var>, <var class="Arg">weight</var>, <var class="Arg">type</var>)</code> for <var class="Arg">weight</var> in <code class="code">[3 .. PqPClass(<var class="Arg">i</var>)]</code> and the given value of <var class="Arg">type</var> invokes the equivalent of the following <code class="code">PqDoConsistencyCheck</code> calls (see <code class="func">PqDoConsistencyCheck</code> (<a href="chap5_mj.html#X7C7D17F878AA1BAA"><span class="RefLink">5.7-17</span></a>)):</p>
@@ -967,8 +967,8 @@ PqAddTails(i, weight);
 
 <h5>5.7-9 PqCollectDefiningRelations</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqCollectDefiningRelations</code>( <var class="Arg">i</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqCollectDefiningRelations</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqCollectDefiningRelations</code>( <var class="Arg">i</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqCollectDefiningRelations</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, direct the <code class="code">pq</code> program to collect the images of the defining relations of the original fp group of the process, with respect to the current pc presentation, in the context of finding the next class (see <code class="func">PqNextClass</code> (<a href="chap5_mj.html#X832F69597C095A27"><span class="RefLink">5.6-4</span></a>)). If the tails operation is not complete then the relations may be evaluated incorrectly.</p>
 
 <p><em>Note:</em> For those familiar with the <code class="code">pq</code> program, <code class="code">PqCollectDefiningRelations</code> performs menu item 9 of the Advanced <span class="SimpleMath">\(p\)</span>-Quotient menu.</p>
@@ -977,8 +977,8 @@ PqAddTails(i, weight);
 
 <h5>5.7-10 PqCollectWordInDefiningGenerators</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqCollectWordInDefiningGenerators</code>( <var class="Arg">i</var>, <var class="Arg">word</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqCollectWordInDefiningGenerators</code>( <var class="Arg">word</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqCollectWordInDefiningGenerators</code>( <var class="Arg">i</var>, <var class="Arg">word</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqCollectWordInDefiningGenerators</code>( <var class="Arg">word</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, take a user-defined word <var class="Arg">word</var> in the defining generators of the original presentation of the fp or pc group of the process. Each generator is mapped into the current pc presentation, and the resulting word is collected with respect to the current pc presentation. The result of the collection is returned as a list of generator number, exponent pairs.</p>
 
 <p>The <var class="Arg">word</var> argument may be input in either of the two ways described for <code class="code">PqCollect</code> (see <code class="func">PqCollect</code> (<a href="chap5_mj.html#X8633356078CA4115"><span class="RefLink">5.7-1</span></a>)).</p>
@@ -989,8 +989,8 @@ PqAddTails(i, weight);
 
 <h5>5.7-11 PqCommutatorDefiningGenerators</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqCommutatorDefiningGenerators</code>( <var class="Arg">i</var>, <var class="Arg">words</var>, <var class="Arg">pow</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqCommutatorDefiningGenerators</code>( <var class="Arg">words</var>, <var class="Arg">pow</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqCommutatorDefiningGenerators</code>( <var class="Arg">i</var>, <var class="Arg">words</var>, <var class="Arg">pow</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqCommutatorDefiningGenerators</code>( <var class="Arg">words</var>, <var class="Arg">pow</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, take a list <var class="Arg">words</var> of user-defined words in the defining generators of the original presentation of the fp or pc group of the process, and an integer power <var class="Arg">pow</var>. Each generator is mapped into the current pc presentation. The list <var class="Arg">words</var> is interpreted as a left-normed commutator which is then raised to <var class="Arg">pow</var> and collected with respect to the current pc presentation. The result of the collection is returned as a list of generator number, exponent pairs.</p>
 
 <p><em>Note</em> For those familiar with the <code class="code">pq</code> program, <code class="code">PqCommutatorDefiningGenerators</code> performs menu item 24 of the Advanced <span class="SimpleMath">\(p\)</span>-Quotient menu.</p>
@@ -999,8 +999,8 @@ PqAddTails(i, weight);
 
 <h5>5.7-12 PqDoExponentChecks</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqDoExponentChecks</code>( <var class="Arg">i:</var> [<var class="Arg">Bounds</var> <var class="Arg">:=</var> <var class="Arg">list</var>] )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqDoExponentChecks</code>( <var class="Arg">:</var> [<var class="Arg">Bounds</var> <var class="Arg">:=</var> <var class="Arg">list</var>] )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqDoExponentChecks</code>( <var class="Arg">i:</var> [<var class="Arg">Bounds</var> <var class="Arg">:=</var> <var class="Arg">list</var>] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqDoExponentChecks</code>( <var class="Arg">:</var> [<var class="Arg">Bounds</var> <var class="Arg">:=</var> <var class="Arg">list</var>] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, direct the <code class="code">pq</code> program to do exponent checks for weights (inclusively) between the bounds of <code class="code">Bounds</code> or for all weights if <code class="code">Bounds</code> is not given. The value <var class="Arg">list</var> of <code class="code">Bounds</code> (assuming the interactive process is numbered <var class="Arg">i</var>) should be a list of two integers <var class="Arg">low</var>, <var class="Arg">high</var> satisfying <span class="SimpleMath">\(1 \le \textit{low} \le \textit{high} \le \)</span> <code class="code">PqPClass(<var class="Arg">i</var>)</code> (see <code class="func">PqPClass</code> (<a href="chap5_mj.html#X87C7F7EB7C10DC4B"><span class="RefLink">5.5-4</span></a>)). If no exponent law has been specified, no exponent checks are performed.</p>
 
 <p><em>Note:</em> For those familiar with the <code class="code">pq</code> program, <code class="code">PqDoExponentChecks</code> performs menu item 10 of the Advanced <span class="SimpleMath">\(p\)</span>-Quotient menu.</p>
@@ -1009,8 +1009,8 @@ PqAddTails(i, weight);
 
 <h5>5.7-13 PqEliminateRedundantGenerators</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqEliminateRedundantGenerators</code>( <var class="Arg">i</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqEliminateRedundantGenerators</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqEliminateRedundantGenerators</code>( <var class="Arg">i</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqEliminateRedundantGenerators</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, direct the <code class="code">pq</code> program to eliminate redundant generators of the current <span class="SimpleMath">\(p\)</span>-quotient.</p>
 
 <p><em>Note:</em> For those familiar with the <code class="code">pq</code> program, <code class="code">PqEliminateRedundantGenerators</code> performs menu item 11 of the Advanced <span class="SimpleMath">\(p\)</span>-Quotient menu.</p>
@@ -1019,8 +1019,8 @@ PqAddTails(i, weight);
 
 <h5>5.7-14 PqRevertToPreviousClass</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqRevertToPreviousClass</code>( <var class="Arg">i</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqRevertToPreviousClass</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqRevertToPreviousClass</code>( <var class="Arg">i</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqRevertToPreviousClass</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, direct the <code class="code">pq</code> program to abandon the current class and revert to the previous class.</p>
 
 <p><em>Note:</em> For those familiar with the <code class="code">pq</code> program, <code class="code">PqRevertToPreviousClass</code> performs menu item 12 of the Advanced <span class="SimpleMath">\(p\)</span>-Quotient menu.</p>
@@ -1029,8 +1029,8 @@ PqAddTails(i, weight);
 
 <h5>5.7-15 PqSetMaximalOccurrences</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSetMaximalOccurrences</code>( <var class="Arg">i</var>, <var class="Arg">noccur</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSetMaximalOccurrences</code>( <var class="Arg">noccur</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSetMaximalOccurrences</code>( <var class="Arg">i</var>, <var class="Arg">noccur</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSetMaximalOccurrences</code>( <var class="Arg">noccur</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, direct the <code class="code">pq</code> program to set maximal occurrences of the weight 1 generators in the definitions of pcp generators of the group of the process. This can be used to avoid the definition of generators of which one knows for theoretical reasons that they would be eliminated later on.</p>
 
 <p>The argument <var class="Arg">noccur</var> must be a list of non-negative integers of length the number of weight 1 generators (i.e. the rank of the class 1 <span class="SimpleMath">\(p\)</span>-quotient of the group of the process). An entry of <code class="code">0</code> for a particular generator indicates that there is no limit on the number of occurrences for the generator.</p>
@@ -1041,8 +1041,8 @@ PqAddTails(i, weight);
 
 <h5>5.7-16 PqSetMetabelian</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSetMetabelian</code>( <var class="Arg">i</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSetMetabelian</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSetMetabelian</code>( <var class="Arg">i</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSetMetabelian</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, direct the <code class="code">pq</code> program to enforce metabelian-ness.</p>
 
 <p><em>Note:</em> For those familiar with the <code class="code">pq</code> program, <code class="code">PqSetMetabelian</code> performs menu item 14 of the Advanced <span class="SimpleMath">\(p\)</span>-Quotient menu.</p>
@@ -1051,10 +1051,10 @@ PqAddTails(i, weight);
 
 <h5>5.7-17 PqDoConsistencyCheck</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqDoConsistencyCheck</code>( <var class="Arg">i</var>, <var class="Arg">c</var>, <var class="Arg">b</var>, <var class="Arg">a</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqDoConsistencyCheck</code>( <var class="Arg">c</var>, <var class="Arg">b</var>, <var class="Arg">a</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqJacobi</code>( <var class="Arg">i</var>, <var class="Arg">c</var>, <var class="Arg">b</var>, <var class="Arg">a</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqJacobi</code>( <var class="Arg">c</var>, <var class="Arg">b</var>, <var class="Arg">a</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqDoConsistencyCheck</code>( <var class="Arg">i</var>, <var class="Arg">c</var>, <var class="Arg">b</var>, <var class="Arg">a</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqDoConsistencyCheck</code>( <var class="Arg">c</var>, <var class="Arg">b</var>, <var class="Arg">a</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqJacobi</code>( <var class="Arg">i</var>, <var class="Arg">c</var>, <var class="Arg">b</var>, <var class="Arg">a</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqJacobi</code>( <var class="Arg">c</var>, <var class="Arg">b</var>, <var class="Arg">a</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, direct the <code class="code">pq</code> program to do the consistency check for the pc generators with indices <var class="Arg">c</var>, <var class="Arg">b</var>, <var class="Arg">a</var> which should be non-increasing positive integers, i.e. <span class="SimpleMath">\(\textit{c} \ge \textit{b} \ge \textit{a}\)</span>.</p>
 
 <p>There are 3 types of consistency checks:</p>
@@ -1102,8 +1102,8 @@ c(ba) &amp;=&amp; a c[c,a] b[b,a] = acb [c,a][c,a,b][b,a] = \dots \\
 
 <h5>5.7-18 PqCompact</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqCompact</code>( <var class="Arg">i</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqCompact</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqCompact</code>( <var class="Arg">i</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqCompact</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, direct the <code class="code">pq</code> program to do a compaction of its work space. This function is safe to perform only at certain points in time.</p>
 
 <p><em>Note:</em> For those familiar with the <code class="code">pq</code> program, <code class="code">PqCompact</code> performs menu item 16 of the Advanced <span class="SimpleMath">\(p\)</span>-Quotient menu.</p>
@@ -1112,8 +1112,8 @@ c(ba) &amp;=&amp; a c[c,a] b[b,a] = acb [c,a][c,a,b][b,a] = \dots \\
 
 <h5>5.7-19 PqEchelonise</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqEchelonise</code>( <var class="Arg">i</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqEchelonise</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqEchelonise</code>( <var class="Arg">i</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqEchelonise</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, direct the <code class="code">pq</code> program to echelonise the word most recently collected by <code class="code">PqCollect</code> or <code class="code">PqCommutator</code> against the relations of the current pc presentation, and return the number of the generator made redundant or <code class="keyw">fail</code> if no generator was made redundant. A call to <code class="code">PqCollect</code> (see <code class="func">PqCollect</code> (<a href="chap5_mj.html#X8633356078CA4115"><span class="RefLink">5.7-1</span></a>)) or <code class="code">PqCommutator</code> (see <code class="func">PqCommutator</code> (<a href="chap5_mj.html#X789B120B7E2F3017"><span class="RefLink">5.7-3</span></a>)) needs to be performed prior to using this command.</p>
 
 <p><em>Note:</em> For those familiar with the <code class="code">pq</code> program, <code class="code">PqEchelonise</code> performs menu item 17 of the Advanced <span class="SimpleMath">\(p\)</span>-Quotient menu.</p>
@@ -1122,8 +1122,8 @@ c(ba) &amp;=&amp; a c[c,a] b[b,a] = acb [c,a][c,a,b][b,a] = \dots \\
 
 <h5>5.7-20 PqSupplyAutomorphisms</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSupplyAutomorphisms</code>( <var class="Arg">i</var>, <var class="Arg">mlist</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSupplyAutomorphisms</code>( <var class="Arg">mlist</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSupplyAutomorphisms</code>( <var class="Arg">i</var>, <var class="Arg">mlist</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSupplyAutomorphisms</code>( <var class="Arg">mlist</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, supply the automorphism data provided by the list <var class="Arg">mlist</var> of matrices with non-negative integer coefficients. Each matrix in <var class="Arg">mlist</var> describes one automorphism in the following way.</p>
 
 
@@ -1141,8 +1141,8 @@ c(ba) &amp;=&amp; a c[c,a] b[b,a] = acb [c,a][c,a,b][b,a] = \dots \\
 
 <h5>5.7-21 PqExtendAutomorphisms</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqExtendAutomorphisms</code>( <var class="Arg">i</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqExtendAutomorphisms</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqExtendAutomorphisms</code>( <var class="Arg">i</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqExtendAutomorphisms</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, direct the <code class="code">pq</code> program to extend automorphisms of the <span class="SimpleMath">\(p\)</span>-quotient of the previous class to the <span class="SimpleMath">\(p\)</span>-quotient of the present class.</p>
 
 <p><em>Note:</em> For those familiar with the <code class="code">pq</code> program, <code class="code">PqExtendAutomorphisms</code> uses menu item 18 of the Advanced <span class="SimpleMath">\(p\)</span>-Quotient menu.</p>
@@ -1151,8 +1151,8 @@ c(ba) &amp;=&amp; a c[c,a] b[b,a] = acb [c,a][c,a,b][b,a] = \dots \\
 
 <h5>5.7-22 PqApplyAutomorphisms</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqApplyAutomorphisms</code>( <var class="Arg">i</var>, <var class="Arg">qfac</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqApplyAutomorphisms</code>( <var class="Arg">qfac</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqApplyAutomorphisms</code>( <var class="Arg">i</var>, <var class="Arg">qfac</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqApplyAutomorphisms</code>( <var class="Arg">qfac</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, direct the <code class="code">pq</code> program to apply automorphisms; <var class="Arg">qfac</var> is the queue factor e.g. <code class="code">15</code>.</p>
 
 <p><em>Note:</em> For those familiar with the <code class="code">pq</code> program, <code class="code">PqCloseRelations</code> performs menu item 19 of the Advanced <span class="SimpleMath">\(p\)</span>-Quotient menu.</p>
@@ -1161,8 +1161,8 @@ c(ba) &amp;=&amp; a c[c,a] b[b,a] = acb [c,a][c,a,b][b,a] = \dots \\
 
 <h5>5.7-23 PqDisplayStructure</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqDisplayStructure</code>( <var class="Arg">i:</var> [<var class="Arg">Bounds</var> <var class="Arg">:=</var> <var class="Arg">list</var>] )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqDisplayStructure</code>( <var class="Arg">:</var> [<var class="Arg">Bounds</var> <var class="Arg">:=</var> <var class="Arg">list</var>] )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqDisplayStructure</code>( <var class="Arg">i:</var> [<var class="Arg">Bounds</var> <var class="Arg">:=</var> <var class="Arg">list</var>] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqDisplayStructure</code>( <var class="Arg">:</var> [<var class="Arg">Bounds</var> <var class="Arg">:=</var> <var class="Arg">list</var>] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, direct the <code class="code">pq</code> program to display the structure for the pcp generators numbered (inclusively) between the bounds of <code class="code">Bounds</code> or for all generators if <code class="code">Bounds</code> is not given. The value <var class="Arg">list</var> of <code class="code">Bounds</code> (assuming the interactive process is numbered <var class="Arg">i</var>) should be a list of two integers <var class="Arg">low</var>, <var class="Arg">high</var> satisfying <span class="SimpleMath">\(1 \le \textit{low} \le \textit{high} \le \)</span> <code class="code">PqNrPcGenerators(<var class="Arg">i</var>)</code> (see <code class="func">PqNrPcGenerators</code> (<a href="chap5_mj.html#X7DE2F6C686C672DD"><span class="RefLink">5.5-1</span></a>)). <code class="code">PqDisplayStructure</code> also accepts the option <code class="code">OutputLevel</code> (see <a href="chap6_mj.html#X87EE6DD67C9996A3"><span class="RefLink">6.2</span></a>).</p>
 
 <p><em>Explanation of output</em></p>
@@ -1205,8 +1205,8 @@ c(ba) &amp;=&amp; a c[c,a] b[b,a] = acb [c,a][c,a,b][b,a] = \dots \\
 
 <h5>5.7-24 PqDisplayAutomorphisms</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqDisplayAutomorphisms</code>( <var class="Arg">i:</var> [<var class="Arg">Bounds</var> <var class="Arg">:=</var> <var class="Arg">list</var>] )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqDisplayAutomorphisms</code>( <var class="Arg">:</var> [<var class="Arg">Bounds</var> <var class="Arg">:=</var> <var class="Arg">list</var>] )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqDisplayAutomorphisms</code>( <var class="Arg">i:</var> [<var class="Arg">Bounds</var> <var class="Arg">:=</var> <var class="Arg">list</var>] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqDisplayAutomorphisms</code>( <var class="Arg">:</var> [<var class="Arg">Bounds</var> <var class="Arg">:=</var> <var class="Arg">list</var>] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, direct the <code class="code">pq</code> program to display the automorphism actions on the pcp generators numbered (inclusively) between the bounds of <code class="code">Bounds</code> or for all generators if <code class="code">Bounds</code> is not given. The value <var class="Arg">list</var> of <code class="code">Bounds</code> (assuming the interactive process is numbered <var class="Arg">i</var>) should be a list of two integers <var class="Arg">low</var>, <var class="Arg">high</var> satisfying <span class="SimpleMath">\(1 \le \textit{low} \le \textit{high} \le \)</span> <code class="code">PqNrPcGenerators(<var class="Arg">i</var>)</code> (see <code class="func">PqNrPcGenerators</code> (<a href="chap5_mj.html#X7DE2F6C686C672DD"><span class="RefLink">5.5-1</span></a>)). <code class="code">PqDisplayStructure</code> also accepts the option <code class="code">OutputLevel</code> (see <a href="chap6_mj.html#X87EE6DD67C9996A3"><span class="RefLink">6.2</span></a>).</p>
 
 <p><em>Note:</em> For those familiar with the <code class="code">pq</code> program, <code class="code">PqDisplayAutomorphisms</code> performs menu item 21 of the Advanced <span class="SimpleMath">\(p\)</span>-Quotient menu.</p>
@@ -1215,8 +1215,8 @@ c(ba) &amp;=&amp; a c[c,a] b[b,a] = acb [c,a][c,a,b][b,a] = \dots \\
 
 <h5>5.7-25 PqWritePcPresentation</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqWritePcPresentation</code>( <var class="Arg">i</var>, <var class="Arg">filename</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqWritePcPresentation</code>( <var class="Arg">filename</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqWritePcPresentation</code>( <var class="Arg">i</var>, <var class="Arg">filename</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqWritePcPresentation</code>( <var class="Arg">filename</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, direct the <code class="code">pq</code> program to write a pc presentation of a previously-computed quotient of the group of that process, to the file with name <var class="Arg">filename</var>. Here the group of a process is the one given as first argument when <code class="code">PqStart</code> was called to initiate that process (for process <var class="Arg">i</var> the group is stored as <code class="code">ANUPQData.io[<var class="Arg">i</var>].group</code>). If the first character of the string <var class="Arg">filename</var> is not <code class="code">/</code>, <var class="Arg">filename</var> is assumed to be the path of a writable file relative to the directory in which <strong class="pkg">GAP</strong> was started. If a pc presentation has not been previously computed by the <code class="code">pq</code> program, then <code class="code">pq</code> is called to compute it first, effectively invoking <code class="code">PqPcPresentation</code> (see <code class="func">PqPcPresentation</code> (<a href="chap5_mj.html#X7BF135DD84A781EB"><span class="RefLink">5.6-1</span></a>)).</p>
 
 <p><em>Note:</em> For those familiar with the <code class="code">pq</code> program, <code class="code">PqPcWritePresentation</code> performs menu item 25 of the Advanced <span class="SimpleMath">\(p\)</span>-Quotient menu.</p>
@@ -1229,8 +1229,8 @@ c(ba) &amp;=&amp; a c[c,a] b[b,a] = acb [c,a][c,a,b][b,a] = \dots \\
 
 <h5>5.8-1 PqSPComputePcpAndPCover</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSPComputePcpAndPCover</code>( <var class="Arg">i:</var> <var class="Arg">options</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSPComputePcpAndPCover</code>( <var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSPComputePcpAndPCover</code>( <var class="Arg">i:</var> <var class="Arg">options</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSPComputePcpAndPCover</code>( <var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, directs the <code class="code">pq</code> program to compute for the group of that process a pc presentation up to the <span class="SimpleMath">\(p\)</span>-quotient of maximum class or the value of the option <code class="code">ClassBound</code> and the <span class="SimpleMath">\(p\)</span>-cover of that quotient, and sets up tabular information required for computation of a standard presentation. Here the group of a process is the one given as first argument when <code class="code">PqStart</code> was called to initiate that process (for process <var class="Arg">i</var> the group is stored as <code class="code">ANUPQData.io[<var class="Arg">i</var>].group</code>).</p>
 
 <p>The possible <var class="Arg">options</var> are <code class="code">Prime</code>, <code class="code">ClassBound</code>, <code class="code">Relators</code>, <code class="code">Exponent</code>, <code class="code">Metabelian</code> and <code class="code">OutputLevel</code> (see Chapter <a href="chap6_mj.html#X7B0946E97E7EB359"><span class="RefLink"><span class="Heading">ANUPQ Options</span></span></a> for detailed descriptions of these options). The option <code class="code">Prime</code> is normally determined via <code class="code">PrimePGroup</code>, and so is not required unless the group doesn't know it's a <span class="SimpleMath">\(p\)</span>-group and <code class="code">HasPrimePGroup</code> returns <code class="keyw">false</code>.</p>
@@ -1241,8 +1241,8 @@ c(ba) &amp;=&amp; a c[c,a] b[b,a] = acb [c,a][c,a,b][b,a] = \dots \\
 
 <h5>5.8-2 PqSPStandardPresentation</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSPStandardPresentation</code>( <var class="Arg">i</var>[, <var class="Arg">mlist</var>]<var class="Arg">:</var> [<var class="Arg">options</var>] )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSPStandardPresentation</code>( [<var class="Arg">mlist</var>]<var class="Arg">:</var> [<var class="Arg">options</var>] )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSPStandardPresentation</code>( <var class="Arg">i</var>[, <var class="Arg">mlist</var>]<var class="Arg">:</var> [<var class="Arg">options</var>] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSPStandardPresentation</code>( [<var class="Arg">mlist</var>]<var class="Arg">:</var> [<var class="Arg">options</var>] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, inputs data given by <var class="Arg">options</var> to compute a standard presentation for the group of that process. If argument <var class="Arg">mlist</var> is given it is assumed to be the automorphism group data required. Otherwise it is assumed that a call to either <code class="code">Pq</code> (see <code class="func">Pq</code> (<a href="chap5_mj.html#X85408C4C790439E7"><span class="RefLink">5.3-1</span></a>)) or <code class="code">PqEpimorphism</code> (see <code class="func">PqEpimorphism</code> (<a href="chap5_mj.html#X839E6F578227A8EA"><span class="RefLink">5.3-2</span></a>)) has generated a <span class="SimpleMath">\(p\)</span>-quotient and that <strong class="pkg">GAP</strong> can compute its automorphism group from which the necessary automorphism group data can be derived. The group of the process is the one given as first argument when <code class="code">PqStart</code> was called to initiate the process (for process <var class="Arg">i</var> the group is stored as <code class="code">ANUPQData.io[<var class="Arg">i</var>].group</code> and the <span class="SimpleMath">\(p\)</span>-quotient if existent is stored as <code class="code">ANUPQData.io[<var class="Arg">i</var>].pQuotient</code>). If <var class="Arg">mlist</var> is not given and a <span class="SimpleMath">\(p\)</span>-quotient of the group has not been previously computed a class 1 <span class="SimpleMath">\(p\)</span>-quotient is computed.</p>
 
 <p><code class="code">PqSPStandardPresentation</code> accepts three options, all optional:</p>
@@ -1269,8 +1269,8 @@ c(ba) &amp;=&amp; a c[c,a] b[b,a] = acb [c,a][c,a,b][b,a] = \dots \\
 
 <h5>5.8-3 PqSPSavePresentation</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSPSavePresentation</code>( <var class="Arg">i</var>, <var class="Arg">filename</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSPSavePresentation</code>( <var class="Arg">filename</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSPSavePresentation</code>( <var class="Arg">i</var>, <var class="Arg">filename</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSPSavePresentation</code>( <var class="Arg">filename</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, directs the <code class="code">pq</code> program to save the standard presentation previously computed for the group of that process to the file with name <var class="Arg">filename</var>, where the group of a process is the one given as first argument when <code class="code">PqStart</code> was called to initiate that process. If the first character of the string <var class="Arg">filename</var> is not <code class="code">/</code>, <var class="Arg">filename</var> is assumed to be the path of a writable file relative to the directory in which <strong class="pkg">GAP</strong> was started.</p>
 
 <p><em>Note:</em> For those familiar with the <code class="code">pq</code> program, <code class="code">PqSPSavePresentation</code> performs menu item 3 of the Standard Presentation menu.</p>
@@ -1279,8 +1279,8 @@ c(ba) &amp;=&amp; a c[c,a] b[b,a] = acb [c,a][c,a,b][b,a] = \dots \\
 
 <h5>5.8-4 PqSPCompareTwoFilePresentations</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSPCompareTwoFilePresentations</code>( <var class="Arg">i</var>, <var class="Arg">f1</var>, <var class="Arg">f2</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSPCompareTwoFilePresentations</code>( <var class="Arg">f1</var>, <var class="Arg">f2</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSPCompareTwoFilePresentations</code>( <var class="Arg">i</var>, <var class="Arg">f1</var>, <var class="Arg">f2</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSPCompareTwoFilePresentations</code>( <var class="Arg">f1</var>, <var class="Arg">f2</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, direct the <code class="code">pq</code> program to compare the presentations in the files with names <var class="Arg">f1</var> and <var class="Arg">f2</var> and returns <code class="keyw">true</code> if they are identical and <code class="keyw">false</code> otherwise. For each of the strings <var class="Arg">f1</var> and <var class="Arg">f2</var>, if the first character is not a <code class="code">/</code> then it is assumed to be the path of a readable file relative to the directory in which <strong class="pkg">GAP</strong> was started.</p>
 
 <p><em>Notes</em></p>
@@ -1293,8 +1293,8 @@ c(ba) &amp;=&amp; a c[c,a] b[b,a] = acb [c,a][c,a,b][b,a] = \dots \\
 
 <h5>5.8-5 PqSPIsomorphism</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSPIsomorphism</code>( <var class="Arg">i</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSPIsomorphism</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSPIsomorphism</code>( <var class="Arg">i</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqSPIsomorphism</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, direct the <code class="code">pq</code> program to compute the isomorphism mapping from the <span class="SimpleMath">\(p\)</span>-group of the process to its standard presentation. This function provides a description only; for a <strong class="pkg">GAP</strong> object, use <code class="code">EpimorphismStandardPresentation</code> (see <code class="func">EpimorphismStandardPresentation</code> (<a href="chap5_mj.html#X791392977B2D692D"><span class="RefLink">5.3-5</span></a>)).</p>
 
 <p><em>Note:</em> For those familiar with the <code class="code">pq</code> program, <code class="code">PqSPIsomorphism</code> performs menu item 8 of the Standard Presentation menu.</p>
@@ -1309,8 +1309,8 @@ c(ba) &amp;=&amp; a c[c,a] b[b,a] = acb [c,a][c,a,b][b,a] = \dots \\
 
 <h5>5.9-1 PqPGSupplyAutomorphisms</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPGSupplyAutomorphisms</code>( <var class="Arg">i</var>[, <var class="Arg">mlist</var>]<var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPGSupplyAutomorphisms</code>( [<var class="Arg">mlist</var>]<var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPGSupplyAutomorphisms</code>( <var class="Arg">i</var>[, <var class="Arg">mlist</var>]<var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPGSupplyAutomorphisms</code>( [<var class="Arg">mlist</var>]<var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, supply the <code class="code">pq</code> program with the automorphism group data needed for the current quotient of the group of that process (for process <var class="Arg">i</var> the group is stored as <code class="code">ANUPQData.io[<var class="Arg">i</var>].group</code>). For a description of the format of <var class="Arg">mlist</var> see <code class="func">PqSupplyAutomorphisms</code> (<a href="chap5_mj.html#X852947327FC39DDF"><span class="RefLink">5.7-20</span></a>). The options possible are <code class="code">NumberOfSolubleAutomorphisms</code> and <code class="code">RelativeOrders</code>. (Detailed descriptions of these options may be found in Chapter <a href="chap6_mj.html#X7B0946E97E7EB359"><span class="RefLink"><span class="Heading">ANUPQ Options</span></span></a>.)</p>
 
 <p>If <var class="Arg">mlist</var> is omitted, the automorphism data is determined from the group of the process which must have been a <span class="SimpleMath">\(p\)</span>-group in pc presentation.</p>
@@ -1321,8 +1321,8 @@ c(ba) &amp;=&amp; a c[c,a] b[b,a] = acb [c,a][c,a,b][b,a] = \dots \\
 
 <h5>5.9-2 PqPGExtendAutomorphisms</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPGExtendAutomorphisms</code>( <var class="Arg">i</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPGExtendAutomorphisms</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPGExtendAutomorphisms</code>( <var class="Arg">i</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPGExtendAutomorphisms</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, direct the <code class="code">pq</code> program to compute the extensions of the automorphisms of the <span class="SimpleMath">\(p\)</span>-quotient of the previous class to the <span class="SimpleMath">\(p\)</span>-quotient of the current class. You may wish to set the <code class="code">InfoLevel</code> of <code class="code">InfoANUPQ</code> to 2 (or more) in order to see the output from the <code class="code">pq</code> program (see <code class="func">InfoANUPQ</code> (<a href="chap3_mj.html#X7CBC9B458497BFF1"><span class="RefLink">3.3-1</span></a>)).</p>
 
 <p><em>Note:</em> For those familiar with the <code class="code">pq</code> program, <code class="code">PqPGExtendAutomorphisms</code> performs menu item 2 of the main or advanced <span class="SimpleMath">\(p\)</span>-Group Generation menu.</p>
@@ -1331,8 +1331,8 @@ c(ba) &amp;=&amp; a c[c,a] b[b,a] = acb [c,a][c,a,b][b,a] = \dots \\
 
 <h5>5.9-3 PqPGConstructDescendants</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPGConstructDescendants</code>( <var class="Arg">i:</var> <var class="Arg">options</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPGConstructDescendants</code>( <var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPGConstructDescendants</code>( <var class="Arg">i:</var> <var class="Arg">options</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPGConstructDescendants</code>( <var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, direct the <code class="code">pq</code> program to construct descendants prescribed by <var class="Arg">options</var>, and return the number of descendants constructed (compare function <code class="func">PqDescendants</code> (<a href="chap4_mj.html#X80985CC479CD9FA3"><span class="RefLink">4.4-1</span></a>) which returns the list of descendants). The options possible are <code class="code">ClassBound</code>, <code class="code">OrderBound</code>, <code class="code">StepSize</code>, <code class="code">PcgsAutomorphisms</code>, <code class="code">RankInitialSegmentSubgroups</code>, <code class="code">SpaceEfficient</code>, <code class="code">CapableDescendants</code>, <code class="code">AllDescendants</code>, <code class="code">Exponent</code>, <code class="code">Metabelian</code>, <code class="code">BasicAlgorithm</code>, <code class="code">CustomiseOutput</code>. (Detailed descriptions of these options may be found in Chapter <a href="chap6_mj.html#X7B0946E97E7EB359"><span class="RefLink"><span class="Heading">ANUPQ Options</span></span></a>.)</p>
 
 <p><code class="code">PqPGConstructDescendants</code> requires that the <code class="code">pq</code> program has previously computed a pc presentation and a <span class="SimpleMath">\(p\)</span>-cover for a <span class="SimpleMath">\(p\)</span>-quotient of some class of the group of the process.</p>
@@ -1343,14 +1343,14 @@ c(ba) &amp;=&amp; a c[c,a] b[b,a] = acb [c,a][c,a,b][b,a] = \dots \\
 
 <h5>5.9-4 PqPGSetDescendantToPcp</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPGSetDescendantToPcp</code>( <var class="Arg">i</var>, <var class="Arg">cls</var>, <var class="Arg">n</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPGSetDescendantToPcp</code>( <var class="Arg">cls</var>, <var class="Arg">n</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPGSetDescendantToPcp</code>( <var class="Arg">i:</var> [<var class="Arg">Filename</var> <var class="Arg">:=</var> <var class="Arg">name</var>] )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPGSetDescendantToPcp</code>( <var class="Arg">:</var> [<var class="Arg">Filename</var> <var class="Arg">:=</var> <var class="Arg">name</var>] )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPGRestoreDescendantFromFile</code>( <var class="Arg">i</var>, <var class="Arg">cls</var>, <var class="Arg">n</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPGRestoreDescendantFromFile</code>( <var class="Arg">cls</var>, <var class="Arg">n</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPGRestoreDescendantFromFile</code>( <var class="Arg">i:</var> [<var class="Arg">Filename</var> <var class="Arg">:=</var> <var class="Arg">name</var>] )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPGRestoreDescendantFromFile</code>( <var class="Arg">:</var> [<var class="Arg">Filename</var> <var class="Arg">:=</var> <var class="Arg">name</var>] )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPGSetDescendantToPcp</code>( <var class="Arg">i</var>, <var class="Arg">cls</var>, <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPGSetDescendantToPcp</code>( <var class="Arg">cls</var>, <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPGSetDescendantToPcp</code>( <var class="Arg">i:</var> [<var class="Arg">Filename</var> <var class="Arg">:=</var> <var class="Arg">name</var>] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPGSetDescendantToPcp</code>( <var class="Arg">:</var> [<var class="Arg">Filename</var> <var class="Arg">:=</var> <var class="Arg">name</var>] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPGRestoreDescendantFromFile</code>( <var class="Arg">i</var>, <var class="Arg">cls</var>, <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPGRestoreDescendantFromFile</code>( <var class="Arg">cls</var>, <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPGRestoreDescendantFromFile</code>( <var class="Arg">i:</var> [<var class="Arg">Filename</var> <var class="Arg">:=</var> <var class="Arg">name</var>] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqPGRestoreDescendantFromFile</code>( <var class="Arg">:</var> [<var class="Arg">Filename</var> <var class="Arg">:=</var> <var class="Arg">name</var>] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, direct the <code class="code">pq</code> program to restore group <var class="Arg">n</var> of class <var class="Arg">cls</var> from a temporary file, where <var class="Arg">cls</var> and <var class="Arg">n</var> are positive integers, or the group stored in <var class="Arg">name</var>. <code class="code">PqPGSetDescendantToPcp</code> and <code class="code">PqPGRestoreDescendantFromFile</code> are synonyms; they make sense only after a prior call to construct descendants by say <code class="code">PqPGConstructDescendants</code> (see <code class="func">PqPGConstructDescendants</code> (<a href="chap5_mj.html#X82FD51A27D269E43"><span class="RefLink">5.9-3</span></a>)) or the interactive <code class="code">PqDescendants</code> (see <code class="func">PqDescendants</code> (<a href="chap5_mj.html#X795817217C53AB89"><span class="RefLink">5.3-6</span></a>)). In the <code class="code">Filename</code> option forms, the option defaults to the last filename in which a presentation was stored by the <code class="code">pq</code> program.</p>
 
 <p><em>Notes</em></p>
@@ -1371,24 +1371,24 @@ c(ba) &amp;=&amp; a c[c,a] b[b,a] = acb [c,a][c,a,b][b,a] = \dots \\
 
 <h5>5.10-1 PqAPGDegree</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqAPGDegree</code>( <var class="Arg">i</var>, <var class="Arg">step</var>, <var class="Arg">rank:</var> [<var class="Arg">Exponent</var> <var class="Arg">:=</var> <var class="Arg">n</var>] )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqAPGDegree</code>( <var class="Arg">step</var>, <var class="Arg">rank:</var> [<var class="Arg">Exponent</var> <var class="Arg">:=</var> <var class="Arg">n</var>] )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqAPGDegree</code>( <var class="Arg">i</var>, <var class="Arg">step</var>, <var class="Arg">rank:</var> [<var class="Arg">Exponent</var> <var class="Arg">:=</var> <var class="Arg">n</var>] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqAPGDegree</code>( <var class="Arg">step</var>, <var class="Arg">rank:</var> [<var class="Arg">Exponent</var> <var class="Arg">:=</var> <var class="Arg">n</var>] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, direct the <code class="code">pq</code> program to invoke menu item 6 of the Advanced <span class="SimpleMath">\(p\)</span>-Group Generation menu. Here the step-size <var class="Arg">step</var> and the rank <var class="Arg">rank</var> are positive integers and are the arguments required by the <code class="code">pq</code> program. See <a href="chap6_mj.html#X87EE6DD67C9996A3"><span class="RefLink">6.2</span></a> for the one recognised option <code class="code">Exponent</code>.</p>
 
 <p><a id="X7F1182A77AB7650C" name="X7F1182A77AB7650C"></a></p>
 
 <h5>5.10-2 PqAPGPermutations</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqAPGPermutations</code>( <var class="Arg">i:</var> <var class="Arg">options</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqAPGPermutations</code>( <var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqAPGPermutations</code>( <var class="Arg">i:</var> <var class="Arg">options</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqAPGPermutations</code>( <var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, direct the <code class="code">pq</code> program to perform menu item 7 of the Advanced <span class="SimpleMath">\(p\)</span>-Group Generation menu. Here the options <var class="Arg">options</var> recognised are <code class="code">PcgsAutomorphisms</code>, <code class="code">SpaceEfficient</code>, <code class="code">PrintAutomorphisms</code> and <code class="code">PrintPermutations</code> (see Chapter <a href="chap6_mj.html#X7B0946E97E7EB359"><span class="RefLink"><span class="Heading">ANUPQ Options</span></span></a> for details).</p>
 
 <p><a id="X7DD9E7507AA888CC" name="X7DD9E7507AA888CC"></a></p>
 
 <h5>5.10-3 PqAPGOrbits</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqAPGOrbits</code>( <var class="Arg">i:</var> <var class="Arg">options</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqAPGOrbits</code>( <var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqAPGOrbits</code>( <var class="Arg">i:</var> <var class="Arg">options</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqAPGOrbits</code>( <var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, direct the <code class="code">pq</code> to perform menu item 8 of the Advanced <span class="SimpleMath">\(p\)</span>-Group Generation menu.</p>
 
 <p>Here the options <var class="Arg">options</var> recognised are <code class="code">PcgsAutomorphisms</code>, <code class="code">SpaceEfficient</code> and <code class="code">CustomiseOutput</code> (see Chapter <a href="chap6_mj.html#X7B0946E97E7EB359"><span class="RefLink"><span class="Heading">ANUPQ Options</span></span></a> for details). For the <code class="code">CustomiseOutput</code> option only the setting of the <code class="code">orbit</code> is recognised (all other fields if set are ignored).</p>
@@ -1397,8 +1397,8 @@ c(ba) &amp;=&amp; a c[c,a] b[b,a] = acb [c,a][c,a,b][b,a] = \dots \\
 
 <h5>5.10-4 PqAPGOrbitRepresentatives</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqAPGOrbitRepresentatives</code>( <var class="Arg">i:</var> <var class="Arg">options</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqAPGOrbitRepresentatives</code>( <var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqAPGOrbitRepresentatives</code>( <var class="Arg">i:</var> <var class="Arg">options</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqAPGOrbitRepresentatives</code>( <var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, direct the <code class="code">pq</code> to perform item 9 of the Advanced <span class="SimpleMath">\(p\)</span>-Group Generation menu.</p>
 
 <p>The options <var class="Arg">options</var> may be any selection of the following: <code class="code">PcgsAutomorphisms</code>, <code class="code">SpaceEfficient</code>, <code class="code">Exponent</code>, <code class="code">Metabelian</code>, <code class="code">CapableDescendants</code> (or <code class="code">AllDescendants</code>), <code class="code">CustomiseOutput</code> (where only the <code class="code">group</code> and <code class="code">autgroup</code> fields are recognised) and <code class="code">Filename</code> (see Chapter <a href="chap6_mj.html#X7B0946E97E7EB359"><span class="RefLink"><span class="Heading">ANUPQ Options</span></span></a> for details). If <code class="code">Filename</code> is omitted the reduced <span class="SimpleMath">\(p\)</span>-cover is written to the file <code class="code">"redPCover"</code> in the temporary directory whose name is stored in <code class="code">ANUPQData.tmpdir</code>.</p>
@@ -1407,8 +1407,8 @@ c(ba) &amp;=&amp; a c[c,a] b[b,a] = acb [c,a][c,a,b][b,a] = \dots \\
 
 <h5>5.10-5 PqAPGSingleStage</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqAPGSingleStage</code>( <var class="Arg">i:</var> <var class="Arg">options</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqAPGSingleStage</code>( <var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqAPGSingleStage</code>( <var class="Arg">i:</var> <var class="Arg">options</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqAPGSingleStage</code>( <var class="Arg">:</var> <var class="Arg">options</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>for the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, direct the <code class="code">pq</code> to perform option 5 of the Advanced <span class="SimpleMath">\(p\)</span>-Group Generation menu.</p>
 
 <p>The possible options are <code class="code">StepSize</code>, <code class="code">PcgsAutomorphisms</code>, <code class="code">RankInitialSegmentSubgroups</code>, <code class="code">SpaceEfficient</code>, <code class="code">CapableDescendants</code>, <code class="code">AllDescendants</code>, <code class="code">Exponent</code>, <code class="code">Metabelian</code>, <code class="code">BasicAlgorithm</code> and <code class="code">CustomiseOutput</code>. (Detailed descriptions of these options may be found in Chapter <a href="chap6_mj.html#X7B0946E97E7EB359"><span class="RefLink"><span class="Heading">ANUPQ Options</span></span></a>.)</p>
@@ -1423,26 +1423,26 @@ c(ba) &amp;=&amp; a c[c,a] b[b,a] = acb [c,a][c,a,b][b,a] = \dots \\
 
 <h5>5.11-1 PqRead</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqRead</code>( <var class="Arg">i</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqRead</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqRead</code>( <var class="Arg">i</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqRead</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>read a complete line of <strong class="pkg">ANUPQ</strong> output, from the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, if there is output to be read and returns <code class="keyw">fail</code> otherwise. When successful, the line is returned as a string complete with trailing newline, colon, or question-mark character. Please note that it is possible to be "too quick" (i.e. the return can be <code class="keyw">fail</code> purely because the output from <strong class="pkg">ANUPQ</strong> is not there yet), but if <code class="code">PqRead</code> finds any output at all, it waits for a complete line. <code class="code">PqRead</code> also writes the line read via <code class="code">Info</code> at <code class="code">InfoANUPQ</code> level 2. It doesn't try to distinguish banner and menu output from other output of the <code class="code">pq</code> program.</p>
 
 <p><a id="X7ADD82207D049A87" name="X7ADD82207D049A87"></a></p>
 
 <h5>5.11-2 PqReadAll</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqReadAll</code>( <var class="Arg">i</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqReadAll</code>(  )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqReadAll</code>( <var class="Arg">i</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqReadAll</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>read and return as many <em>complete</em> lines of <strong class="pkg">ANUPQ</strong> output, from the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, as there are to be read, <em>at the time of the call</em>, as a list of strings with any trailing newlines removed and returns the empty list otherwise. <code class="code">PqReadAll</code> also writes each line read via <code class="code">Info</code> at <code class="code">InfoANUPQ</code> level 2. It doesn't try to distinguish banner and menu output from other output of the <code class="code">pq</code> program. Whenever <code class="code">PqReadAll</code> finds only a partial line, it waits for the complete line, thus increasing the probability that it has captured all the output to be had from <strong class="pkg">ANUPQ</strong>.</p>
 
 <p><a id="X7EBF3C3681671879" name="X7EBF3C3681671879"></a></p>
 
 <h5>5.11-3 PqReadUntil</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqReadUntil</code>( <var class="Arg">i</var>, <var class="Arg">IsMyLine</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqReadUntil</code>( <var class="Arg">IsMyLine</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqReadUntil</code>( <var class="Arg">i</var>, <var class="Arg">IsMyLine</var>, <var class="Arg">Modify</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqReadUntil</code>( <var class="Arg">IsMyLine</var>, <var class="Arg">Modify</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqReadUntil</code>( <var class="Arg">i</var>, <var class="Arg">IsMyLine</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqReadUntil</code>( <var class="Arg">IsMyLine</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqReadUntil</code>( <var class="Arg">i</var>, <var class="Arg">IsMyLine</var>, <var class="Arg">Modify</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqReadUntil</code>( <var class="Arg">IsMyLine</var>, <var class="Arg">Modify</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>read complete lines of <strong class="pkg">ANUPQ</strong> output, from the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process, "chomps" them (i.e. removes any trailing newline character), emits them to <code class="code">Info</code> at <code class="code">InfoANUPQ</code> level 2 (without trying to distinguish banner and menu output from other output of the <code class="code">pq</code> program), and applies the function <var class="Arg">Modify</var> (where <var class="Arg">Modify</var> is just the identity map/function for the first two forms) until a "chomped" line <var class="Arg">line</var> for which <code class="code"><var class="Arg">IsMyLine</var>( <var class="Arg">Modify</var>(<var class="Arg">line</var>) )</code> is true. <code class="code">PqReadUntil</code> returns the list of <var class="Arg">Modify</var>-ed "chomped" lines read.</p>
 
 <p><em>Notes:</em> When provided by the user, <var class="Arg">Modify</var> should be a function that accepts a single string argument.</p>
@@ -1455,8 +1455,8 @@ c(ba) &amp;=&amp; a c[c,a] b[b,a] = acb [c,a][c,a,b][b,a] = \dots \\
 
 <h5>5.11-4 PqWrite</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqWrite</code>( <var class="Arg">i</var>, <var class="Arg">string</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqWrite</code>( <var class="Arg">string</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqWrite</code>( <var class="Arg">i</var>, <var class="Arg">string</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PqWrite</code>( <var class="Arg">string</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>write <var class="Arg">string</var> to the <var class="Arg">i</var>th or default interactive <strong class="pkg">ANUPQ</strong> process; <var class="Arg">string</var> must be in exactly the form the <strong class="pkg">ANUPQ</strong> standalone expects. The command is echoed via <code class="code">Info</code> at <code class="code">InfoANUPQ</code> level 3 (with a "<code class="code">ToPQ&gt; </code>" prompt); i.e. do <code class="code">SetInfoLevel(InfoANUPQ, 3);</code> to see what is transmitted to the <code class="code">pq</code> program. <code class="code">PqWrite</code> returns <code class="keyw">true</code> if successful in writing to the stream of the interactive <strong class="pkg">ANUPQ</strong> process, and <code class="keyw">fail</code> otherwise.</p>
 
 <p><em>Note:</em> If <code class="code">PqWrite</code> returns <code class="keyw">fail</code> it means that the <strong class="pkg">ANUPQ</strong> process has died.</p>
