@@ -1,6 +1,6 @@
 name: ANUPQ
 version: 3.2
-date: 29/11/2017
+date: 2017-11-29
 description: |
     ANU p-Quotient
 
@@ -23,7 +23,7 @@ GAP: ">= 4.8"
 needed-pkgs:
     - name: "autpgrp"
       version: ">=1.5"
-      url: "http://www.icm.tu-bs.de/~beick/so.html"
+      url: "https://gap-packages.github.io/autpgrp/"
 
 www: https://gap-packages.github.io/anupq/
 readme: README
